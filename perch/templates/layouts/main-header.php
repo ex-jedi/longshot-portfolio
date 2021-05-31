@@ -38,13 +38,9 @@
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<!-- For SVG logo. Delete if not needed -->
-				<div class="main-logo-wrapper">
-					<?php perch_content("Main Logo"); ?>
-				</a>
-				</div>
+				<?php perch_content("Header Content"); ?>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
 							'levels'    => 1
 					)); ?>
-        <?php perch_content("Header Content"); ?>
 			</header>
