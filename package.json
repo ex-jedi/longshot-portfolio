@@ -1,0 +1,23 @@
+{
+  "name": "longshot-portfolio",
+  "version": "1.0.0",
+  "description": "longshot-portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "gsap": "^3.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-jedi/longshot-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ex-jedi/longshot-portfolio/issues"
+  },
+  "homepage": "https://github.com/ex-jedi/longshot-portfolio#readme"
+}
