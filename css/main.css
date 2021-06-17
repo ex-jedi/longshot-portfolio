@@ -1,3 +1,39 @@
+@-webkit-keyframes brignell-bounce {
+  25% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes brignell-bounce {
+  25% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -76,6 +112,8 @@ a {
 .down-arrow-svg {
   position: absolute;
   top: 80%;
+  -webkit-animation: brignell-bounce 2s ease-in-out infinite normal forwards;
+          animation: brignell-bounce 2s ease-in-out infinite normal forwards;
 }
 
 .main-nav {
