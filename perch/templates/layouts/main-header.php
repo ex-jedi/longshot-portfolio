@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html lang="en">
 <head>
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/main.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/main.css');?>">
 	<?php $page_css_file	=  perch_page_attribute('css', array('template' => 'bits.html'), true); ?>
@@ -41,6 +41,7 @@
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<!-- For SVG logo. Delete if not needed -->
 				<?php perch_content("Main Logo"); ?>
+				<?php perch_layout("SVG/down-arrow"); ?>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
 							'levels'    => 1
