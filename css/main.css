@@ -46,6 +46,14 @@ a {
   color: #3c3cf6;
 }
 
+.main-header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+
 .main-nav-trigger-wrapper {
   display: none;
 }
