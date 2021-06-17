@@ -87,23 +87,57 @@ a {
 //** Header **
 //*=========================================
 .main-header {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 100vh;
   width: 100vw;
+
 
   //TODO: Move to perch template
   background-position: center;
   background-size: cover;
 }
 
+//********** Main Logo **********
+.main-logo {
+  max-width: 1000px;
+
+}
+
 // *=========================================
 // ** Main Nav  **
 // *=========================================
 
-.main-nav-trigger-wrapper {
-  display: none;
+.main-nav {
+
 }
 
+
+.main-nav-trigger-wrapper {
+  @include flex(column);
+  padding: $paragraph-spacing-medium;
+  background-color: $background-colour-three;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-nav-trigger {
+  background-color: $background-colour-three;
+  font-size: $font-size-medium;
+  color: $font-colour-light;
+  border: none;
+}
+
+.sideways-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+
+}
 //********** Responsive Styles **********
 
 // *=========================================

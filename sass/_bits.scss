@@ -33,7 +33,7 @@ $header-spacing-large: 10rem;
 
 //* Headings
 
-//Sizing
+// FontSizing
 $h1-size: 8rem;
 $h1-size-medium: 6rem;
 $h1-size-small: 5rem;
@@ -58,19 +58,18 @@ $section-spacing-extra-small: 10rem;
 //* Paragraphs
 
 //Font sizing
-$font-size-large: 7rem;
-$font-size-larger: 6rem;
+$font-size-large: 10rem;
 $font-size-medium: 5rem;
-$font-size-main: 4rem;
 $font-size-small: 3rem;
-$font-size-extra-small: 2rem;
-$font-size-tiny: 1rem;
+
 
 //Spacing
-$paragraph-spacing-large: 10rem;
-$paragraph-spacing-medium: 5rem;
-$paragraph-spacing-small: 2.5rem;
-$paragraph-spacing-smaller: 2rem;
+$paragraph-spacing-extra-large: 10rem;
+$paragraph-spacing-large: 5rem;
+$paragraph-spacing-medium: 2.5rem;
+$paragraph-spacing-small: 2rem;
+
+
 
 //* Forms
 
@@ -89,10 +88,10 @@ $input-spacing: 1rem;
 //Main brand Colours
 $background-colour-main: #f4f1f0;
 $background-colour-two: #6c9184;
-$background-colour-three: #756c91;
+$background-colour-three: #2B3B36;
 
 //Main Font Colours
-$font-colour-light: #f4f1f0;
+$font-colour-light: #F2EDEB;
 $font-colour-dark: #252525;
 
 $link-colour: #3c3cf6;
