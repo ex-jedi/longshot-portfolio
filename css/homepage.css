@@ -34,3 +34,21 @@
             transform: translateY(0);
   }
 }
+.section-one {
+  padding: 20rem;
+}
+
+.section-one-text {
+  font-size: 10rem;
+  color: #2B3B36;
+}
+
+.intro-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}

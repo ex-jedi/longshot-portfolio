@@ -60,11 +60,11 @@ main {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-section {
-  padding: $section-spacing-medium 0;
-}
-
 //********** Paragraphs **********
+
+p {
+  font-kerning: none;
+}
 
 // *=========================================
 // ** Inline **
@@ -97,10 +97,7 @@ a {
   position: relative;
   height: 100vh;
   width: 100vw;
-
-
-  //TODO: Move to perch template
-
+  z-index: 4;
 }
 
 //********** Main Logo **********

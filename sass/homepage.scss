@@ -5,3 +5,21 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Section One **
+//*=========================================
+
+.section-one {
+  padding: $section-spacing-small;
+}
+
+.section-one-text {
+  font-size: $font-size-large;
+  color: $font-colour-green;
+}
+
+.intro-wrapper {
+  @include flex(row);
+}
+
