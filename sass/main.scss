@@ -60,6 +60,10 @@ main {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
+section {
+  padding: $section-spacing-medium 0;
+}
+
 //********** Paragraphs **********
 
 // *=========================================
@@ -119,12 +123,13 @@ a {
 }
 
 .main-nav-trigger {
+  //FIXME: Odd bit of spacing at the bottom
   position: fixed;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  padding: $paragraph-spacing-medium;
   background-color: $background-colour-three;
+  padding: $paragraph-spacing-medium;
   margin: 0;
   font-size: $font-size-medium;
   color: $font-colour-light;
@@ -135,6 +140,8 @@ a {
   writing-mode: vertical-rl;
   text-orientation: sideways;
   transform: rotate(180deg);
+  margin: 0;
+  padding: 0;
   //* Writing mode doesn't work on buttons it seems. Span added for sideways text
 }
 

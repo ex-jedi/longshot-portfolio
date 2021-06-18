@@ -17,19 +17,19 @@ import { displayInstagramFeed } from './utils';
 
 // ********** Homepage Parallax **********
 
-homepageParallax();
+// homepageParallax();
 
 // ********** Instagram Feed **********
 
 displayInstagramFeed();
 
 // ********** Flickity **********
-const carousel = document.querySelector('.main-carousel');
-const flkty = new Flickity(carousel, {
-  imagesLoaded: true,
-  autoPlay: 10000,
-  prevNextButtons: false,
-  wrapAround: true,
-  selectedAttraction: 0.006,
-  friction: 0.15,
-});
+// const carousel = document.querySelector('.main-carousel');
+// const flkty = new Flickity(carousel, {
+//   imagesLoaded: true,
+//   autoPlay: 10000,
+//   prevNextButtons: false,
+//   wrapAround: true,
+//   selectedAttraction: 0.006,
+//   friction: 0.15,
+// });

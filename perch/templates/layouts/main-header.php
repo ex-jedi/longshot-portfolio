@@ -17,8 +17,8 @@
 													'add-trailing-slash' => false,
 													'include-domain'     => true,
 											), true);
-		$mainsitename      = "XXXX";
-		$pagetitlename = " - XXXX";
+		$mainsitename      = "Longshot Photography";
+		$pagetitlename = " - Longshot Photography";
 		$sharing_image = '/images/default-sharing-image.jpg';
 
 		PerchSystem::set_var('domain',$domain);

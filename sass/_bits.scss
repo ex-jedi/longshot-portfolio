@@ -41,19 +41,18 @@ $h2-size: 8rem;
 $h3-size: 1rem;
 
 //Spacing
-$h1-spacing-large: 5rem;
-$h1-spacing: 20rem;
-$h2-spacing: 20rem;
-$h3-spacing: 1rem;
+$heading-spacing-large: 20rem;
+$heading-spacing-medium: 15rem;
+$heading-spacing-small: 10rem;
 
 //* Sections
-$section-spacing-extra-large: 40rem;
-$section-spacing-very-large: 35rem;
-$section-spacing-large: 30rem;
-$section-spacing-medium: 25rem;
+$section-spacing-extra-large: 46rem;
+$section-spacing-large: 32rem;
+$section-spacing-medium: 28rem;
 $section-spacing-small: 20rem;
 $section-spacing-smaller: 15rem;
 $section-spacing-extra-small: 10rem;
+$section-spacing-tiny: 2.5rem;
 
 //* Paragraphs
 
@@ -86,7 +85,7 @@ $input-spacing: 1rem;
 //TODO: Customise brand colours
 
 //Main brand Colours
-$background-colour-main: #f4f1f0;
+$background-colour-light: #F2EDEB;
 $background-colour-two: #6c9184;
 $background-colour-three: #2B3B36;
 
@@ -97,8 +96,6 @@ $font-colour-dark: #252525;
 $link-colour: #3c3cf6;
 $link-visited: #8608fb;
 
-//General Colours
-$light-background-colour: $background-colour-main;
 
 //*=========================================
 //** Effects and Animation  **
