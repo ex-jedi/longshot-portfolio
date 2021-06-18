@@ -116,6 +116,12 @@
   width: 30%;
 }
 
+.homepage-gallery-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .gallery-two-image-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
