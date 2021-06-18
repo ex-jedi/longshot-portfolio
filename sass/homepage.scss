@@ -78,5 +78,25 @@
   width: 30%;
 }
 
+//*=========================================
+//** Gallery **
+//*=========================================
 
+.gallery-two-image-wrapper {
+  @include flex(row);
+}
 
+.half-width-gallery-image-wrapper {
+  margin: 0;
+  padding: 0;
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.full-width-gallery-image-wrapper {
+  width: 100%;
+}
+
+.homepage-gallery-image {
+  width: 100%;
+}

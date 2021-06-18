@@ -35,11 +35,6 @@
   }
 }
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -110,6 +105,7 @@ a {
 }
 
 .main-logo {
+  width: 80%;
   max-width: 1000px;
 }
 

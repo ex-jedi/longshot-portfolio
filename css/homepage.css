@@ -115,3 +115,30 @@
 .bio-image-wrapper {
   width: 30%;
 }
+
+.gallery-two-image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.half-width-gallery-image-wrapper {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 50%;
+}
+
+.full-width-gallery-image-wrapper {
+  width: 100%;
+}
+
+.homepage-gallery-image {
+  width: 100%;
+}
