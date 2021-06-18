@@ -122,6 +122,7 @@ label {
 
 .input-and-label-div {
   @include flex(row);
+  position: relative;
   align-items: flex-end;
   justify-content: flex-start;
   margin-bottom: $section-spacing-extra-small;
@@ -132,5 +133,68 @@ label {
     border: 0;
     padding: 0;
     border-bottom: 4px solid $font-colour-green;
+  }
+}
+
+.text-area-label {
+  position: absolute;
+  top: 10px;
+  background-color: $background-colour-light;
+  padding-right: $font-size-small;
+}
+
+.text-area-input {
+  // Custom Scrollbar
+  flex: 1 1 auto;
+  font-size: $font-size-medium;
+  color: $font-colour-green;
+  @include styled-scrollbar(
+    1rem,
+    $background-colour-three,
+    $background-colour-light,
+    $background-colour-light
+  );
+
+  text-indent: 24rem;
+  border: 0;
+  padding: 0;
+  resize: none;
+  line-height: 4.4rem;
+  background-attachment: local;
+
+  // Text area underlining
+  background-image: linear-gradient(
+      to right,
+      $background-colour-light 0,
+      transparent 0
+    ),
+    linear-gradient(to left, $background-colour-light 0, transparent 0),
+    repeating-linear-gradient(
+      $background-colour-light,
+      // Leave
+      $background-colour-light 4rem,
+      $font-colour-green 1.8rem,
+      // Seems to control line thickness
+      $font-colour-green 4.4rem,
+      $background-colour-light 1.85rem
+    );
+
+  &.active {
+    // Text area underlining
+    background-image: linear-gradient(
+        to right,
+        $background-colour-light 0,
+        transparent 0
+      ),
+      linear-gradient(to left, $background-colour-light 0, transparent 0),
+      repeating-linear-gradient(
+        $background-colour-light,
+        // Leave
+        $background-colour-light 4rem,
+        $font-colour-light 1.8rem,
+        // Seems to control line thickness
+        $font-colour-light 4.4rem,
+        $background-colour-light 1.85rem
+      );
   }
 }
