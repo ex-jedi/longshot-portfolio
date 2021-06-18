@@ -1,28 +1,27 @@
-<section class="general-contact-section colour-will-change" id="contact-me">
-  <h2 class="section-heading general-contact-form-title">
+<section class="contact-section" id="contact-me">
+  <h2 class="section-heading contact-form-heading">
       <perch:content id="contactHeading" type="text" label="Contact Form Heading" required>
   </h2>
-  <div class="general-form-container">
       <perch:form class="general-contact-form" id="contact" method="post" app="perch_forms">
-          <div>
+          <div class="input-and-label-div">
               <perch:label for="name">Name</perch:label>
               <perch:input class="name-input" type="text" id="name" label="Name" required >
-              <perch:error class="form-error" for="name" type="required">Name</perch:error>
           </div>
-          <div>
+          <div class="input-and-label-div">
               <perch:label for="email">Email</perch:label>
               <perch:input class="email-input"  type="email" id="email" label="Email" required>
-              <perch:error class="form-error" for="email" type="required">Please add your email address</perch:error>
-              <perch:error class="form-error" for="email" type="format">Please check your email address</perch:error>
+          </div>
+          <div class="input-and-label-div">
+              <perch:label for="phone">Phone (optional)</perch:label>
+              <perch:input class="phone-input" type="tel" id="phone" label="phone" required>
           </div>
           <div class="form-identification-number">
               <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
               <perch:input type="textarea" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot" />
           </div>
-          <div>
+          <div class="input-and-label-div">
               <perch:label for="message">Message</perch:label>
               <perch:input class="text-area-input" type="textarea" id="message" label="Message" required>
-              <perch:error class="form-error" for="message" type="required">Please add a message</perch:error>
           </div>
           <div class="checkbox-div">
             <perch:label class="mailing-list-check" for="mailingListCheck">If you would like to receive (very!) occasional updates on my work, photography tips and special offers please tick this box > </perch:label>
@@ -39,5 +38,4 @@
               </div>
           </perch:success>
       </perch:form>
-  </div>
 </section>

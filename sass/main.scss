@@ -32,7 +32,6 @@ body {
   max-width: 1920px;
   overflow-x: hidden;
   @include main-font-stack;
-
 }
 
 // *=========================================
@@ -40,6 +39,18 @@ body {
 // *=========================================
 
 //********** Headings**********
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.section-heading {
+  font-size: $heading-size-large;
+  margin: 0 auto $heading-spacing-large;
+}
 
 //********** Containers **********
 
@@ -104,7 +115,7 @@ a {
 .down-arrow-svg {
   position: absolute;
   top: 80%;
-  animation: brignell-bounce  2s ease-in-out infinite normal forwards;
+  animation: brignell-bounce 2s ease-in-out infinite normal forwards;
 }
 
 // *=========================================
@@ -112,7 +123,7 @@ a {
 // *=========================================
 
 .main-nav {
- display: none;
+  display: none;
 }
 
 .main-nav-trigger {

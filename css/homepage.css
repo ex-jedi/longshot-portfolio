@@ -148,3 +148,40 @@
 .homepage-gallery-image {
   width: 100%;
 }
+
+.contact-section {
+  padding: 20rem 28rem;
+  background-color: #F2EDEB;
+  color: #2B3B36;
+}
+
+label {
+  font-size: 5rem;
+  margin-right: 3rem;
+}
+
+.input-and-label-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 10rem;
+}
+.input-and-label-div input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  border-bottom: 4px solid #2B3B36;
+}

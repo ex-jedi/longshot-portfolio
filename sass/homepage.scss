@@ -54,9 +54,7 @@
   width: 50%;
 }
 
-
 //********** Bio **********
-
 
 .bio-text-wrapper {
   @include flex(column);
@@ -105,4 +103,34 @@
 
 .homepage-gallery-image {
   width: 100%;
+}
+
+//*=========================================
+//** Contact Form **
+//*=========================================
+
+.contact-section {
+  padding: $section-spacing-small $section-spacing-medium;
+  background-color: $background-colour-light;
+  color: $font-colour-green;
+}
+
+label {
+  font-size: $font-size-medium;
+  margin-right: $font-size-small;
+}
+
+.input-and-label-div {
+  @include flex(row);
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: $section-spacing-extra-small;
+
+  input {
+    flex: 1 1 auto;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border-bottom: 4px solid $font-colour-green;
+  }
 }
