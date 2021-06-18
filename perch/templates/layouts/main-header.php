@@ -19,7 +19,7 @@
 											), true);
 		$mainsitename      = "Longshot Photography";
 		$pagetitlename = " - Longshot Photography";
-		$sharing_image = '/images/default-sharing-image.jpg';
+		$sharing_image = '/images/default-sharing-image.png';
 
 		PerchSystem::set_var('domain',$domain);
 		PerchSystem::set_var('mainurl',$mainurl);

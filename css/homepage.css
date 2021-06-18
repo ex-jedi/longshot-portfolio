@@ -66,8 +66,20 @@
 .section-one-text {
   font-size: 10rem;
   color: #2B3B36;
+  margin: 0;
 }
 
 .section-one-image {
   width: 100%;
+}
+
+.intro-wrapper {
+  margin-bottom: 20rem;
+}
+
+.bio-text {
+  color: #875548;
+  background-image: url(/images/gouache-wash-1500.png);
+  background-size: contain;
+  background-position: center 20px left 500px;
 }

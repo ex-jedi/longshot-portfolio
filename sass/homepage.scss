@@ -15,7 +15,6 @@
   background-color: $background-colour-light
 }
 
-
 .section-one-wrapper {
   @include flex(row);
   justify-content: center;
@@ -31,10 +30,27 @@
 .section-one-text {
   font-size: $font-size-large;
   color: $font-colour-green;
+  margin: 0;
 }
 
 .section-one-image {
   width: 100%;
 }
+
+//********** Intro **********
+
+.intro-wrapper {
+  margin-bottom: $section-spacing-small;
+}
+
+//********** Bio **********
+
+.bio-text {
+  color: $font-colour-brown;
+  background-image: url(/images/gouache-wash-1500.png);
+  background-size: contain;
+  background-position: center 20px left 500px;
+}
+
 
 
