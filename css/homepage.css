@@ -47,25 +47,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .section-one-image-wrapper,
-.section-one-text {
+.section-one-text-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  width: 50%;
 }
 
 .section-one-text {
   font-size: 10rem;
-  color: #2B3B36;
   margin: 0;
 }
 
@@ -77,9 +75,43 @@
   margin-bottom: 20rem;
 }
 
-.bio-text {
+.intro-text-wrapper {
+  width: 40%;
+  margin-right: 10rem;
+}
+
+.intro-text {
+  color: #2B3B36;
+}
+
+.intro-image-wrapper {
+  width: 50%;
+}
+
+.bio-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #875548;
   background-image: url(/images/gouache-wash-1500.png);
   background-size: contain;
-  background-position: center 20px left 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  padding: 5rem;
+}
+
+.bio-text {
+  color: #875548;
+}
+
+.bio-image-wrapper {
+  width: 30%;
 }
