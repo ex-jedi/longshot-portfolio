@@ -36,6 +36,7 @@
 }
 .main-header {
   background-color: #f2edeb;
+  padding-top: 2.5rem;
 }
 
 .about-me-header-content-wrapper {
@@ -46,7 +47,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 20rem;
+  padding: 20rem 20rem 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -76,4 +77,11 @@
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   width: 500px;
+}
+
+.about-me-section {
+  background-color: #f2edeb;
+  color: #875548;
+  font-size: 5rem;
+  padding: 20rem 46rem;
 }

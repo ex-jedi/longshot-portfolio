@@ -12,11 +12,12 @@
 
 .main-header {
   background-color: $background-colour-light;
+  padding-top: $paragraph-spacing-medium;
 }
 
 .about-me-header-content-wrapper {
   @include flex(row);
-  padding: $section-spacing-small;
+  padding: $section-spacing-small $section-spacing-small 0;
   justify-content: space-around;
   align-items: center;
 }
@@ -39,4 +40,15 @@
 .about-me-header-image-wrapper {
   flex: 0 1 auto;
   width: 500px;
+}
+
+//*=========================================
+//** Main Page Content **
+//*=========================================
+
+.about-me-section {
+  background-color: $background-colour-light;
+  color: $font-colour-brown;
+  font-size: $font-size-medium;
+  padding: $section-spacing-small $section-spacing-extra-large;
 }
