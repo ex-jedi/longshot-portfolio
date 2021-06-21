@@ -31,7 +31,6 @@
 			'template' => 'default.html'
 		));
 		?>
-		<?php perch_content("Header Background Image"); ?>
 	</head>
 		<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 			<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
@@ -39,8 +38,7 @@
 					<!-- Skip to main content link  -->
 					<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 					<!-- For SVG logo. Delete if not needed -->
-					<?php perch_content("Main Logo"); ?>
-					<?php perch_layout("SVG/down-arrow"); ?>
+					<?php perch_content("Green Logo"); ?>
 						<?php perch_pages_navigation(array(
 								'hide-extensions' => true,
 								'levels'    => 1
