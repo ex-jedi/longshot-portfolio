@@ -37,6 +37,7 @@
 .section-one {
   padding: 20rem;
   background-color: #f2edeb;
+  font-weight: 500;
 }
 
 .section-one-wrapper {
@@ -130,15 +131,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .half-width-gallery-image-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   margin: 0;
   padding: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: 50%;
+  width: 350px;
 }
 
 .full-width-gallery-image-wrapper {
@@ -158,6 +161,7 @@
 label {
   font-size: 5rem;
   margin-right: 3rem;
+  font-weight: 500;
 }
 
 .input-and-label-div {
@@ -185,6 +189,9 @@ label {
   border: 0;
   padding: 0;
   border-bottom: 4px solid #2b3b36;
+  font-size: 5rem;
+  color: inherit;
+  font-weight: 500;
 }
 
 .text-area-label {
@@ -201,6 +208,7 @@ label {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-size: 5rem;
+  font-weight: 500;
   color: #2b3b36;
   text-indent: 24rem;
   border: 0;
@@ -302,12 +310,17 @@ label {
   text-transform: none;
   display: inline-block;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 400;
   width: 90%;
+}
+
+.form-consent-link {
+  color: inherit;
 }
 
 .submit {
   font-size: 5rem;
+  font-weight: 500;
   background-color: #f2edeb;
   text-transform: uppercase;
   border: 5px solid #2b3b36;

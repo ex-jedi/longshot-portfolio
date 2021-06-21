@@ -135,9 +135,10 @@ a {
   background-color: $background-colour-three;
   padding: $paragraph-spacing-medium;
   margin: 0;
-  font-size: $font-size-medium;
-  color: $font-colour-light;
   border: none;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-light;
 }
 
 .sideways-text {
@@ -184,6 +185,31 @@ select {
 // *=========================================
 // ** Footer  **
 // *=========================================
+
+.main-footer {
+  background-color: $background-colour-four;
+  margin: 0;
+  font-size: $font-size-really-tiny;
+  color: $background-colour-light;
+  padding: $paragraph-spacing-medium;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+
+  p {
+    margin: 0 auto $paragraph-spacing-medium;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.footer-legals {
+  margin: $section-spacing-small auto;
+}
 
 //*=========================================
 //** Utility & Accessibility  **
@@ -240,75 +266,3 @@ body:not(.user-is-tabbing) textarea:focus {
     outline: 3px dashed #ff5e00;
   }
 }
-
-//*=========================================
-//** Cookie Warning **
-//*=========================================
-
-.cookie-warning-wrapper {
-  @include flex(row);
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  font-size: 30px;
-  //TODO: Add variables for cookie warning colour
-  background-color: #fff;
-  opacity: 0;
-  z-index: 10;
-  transition: all 0.5s 0.25s;
-
-  @include breakpoint(1100) {
-    font-size: 20px;
-  }
-
-  @include breakpoint(850) {
-    @include flex(column);
-  }
-}
-
-.cookie-warning-paragraph {
-  //TODO: Add variables for cookie warning spacing
-  margin: 0 $section-spacing-small 0 0;
-  color: #000;
-
-  @include breakpoint(1300) {
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 $paragraph-spacing-small 0 0;
-  }
-
-  @include breakpoint(850) {
-    text-align: center;
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 0 $paragraph-spacing-small;
-  }
-}
-
-.cookie-warning-link {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.cookie-warning-button {
-  //TODO: Add variables for cookie warning spacing & colour
-
-  background-color: transparent;
-  border: 2px solid #000;
-  color: #000;
-  font-size: inherit;
-  padding: 5px 20px;
-  width: fit-content;
-  flex: 0 0 auto;
-  text-align: center;
-}
-
-.cookie-warning-wrapper.show-cookie-warning {
-  opacity: 1;
-}
-
-//*=========================================
-//** Browser Specific Styles  **
-//*=========================================

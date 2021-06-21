@@ -13,6 +13,7 @@
 .section-one {
   padding: $section-spacing-small;
   background-color: $background-colour-light;
+  font-weight: 500;
 }
 
 .section-one-wrapper {
@@ -88,13 +89,14 @@
 
 .gallery-two-image-wrapper {
   @include flex(row);
+  flex-wrap: wrap;
 }
 
 .half-width-gallery-image-wrapper {
+  flex: 1 1 auto;
   margin: 0;
   padding: 0;
-  flex: 0 1 auto;
-  width: 50%;
+  width: 350px;
 }
 
 .full-width-gallery-image-wrapper {
@@ -118,6 +120,7 @@
 label {
   font-size: $font-size-medium;
   margin-right: $font-size-small;
+  font-weight: 500;
 }
 
 .input-and-label-div {
@@ -133,6 +136,9 @@ label {
     border: 0;
     padding: 0;
     border-bottom: 4px solid $font-colour-green;
+    font-size: $font-size-medium;
+    color: inherit;
+    font-weight: 500;
   }
 }
 
@@ -148,6 +154,7 @@ label {
   // Custom Scrollbar
   flex: 1 1 auto;
   font-size: $font-size-medium;
+  font-weight: 500;
   color: $font-colour-green;
   @include styled-scrollbar(
     1rem,
@@ -205,6 +212,7 @@ label {
 }
 
 //********** Checkbox **********
+
 .checkbox-div {
   @include flex(row);
   margin-bottom: $section-spacing-small;
@@ -259,13 +267,18 @@ label {
     text-transform: none;
     display: inline-block;
     font-size: $font-size-tiny;
-    font-weight: bold;
+    font-weight: 400;
     width: 90%;
   }
 }
 
+.form-consent-link {
+  color: inherit;
+}
+
 .submit {
   font-size: $font-size-medium;
+  font-weight: 500;
   background-color: $background-colour-light;
   text-transform: uppercase;
   border: 5px solid $font-colour-green;
