@@ -263,3 +263,14 @@ label {
     width: 90%;
   }
 }
+
+.submit {
+  font-size: $font-size-medium;
+  background-color: $background-colour-light;
+  text-transform: uppercase;
+  border: 5px solid $font-colour-green;
+  padding: 1rem;
+  margin: 0 auto;
+  display: block;
+  appearance: none;
+}

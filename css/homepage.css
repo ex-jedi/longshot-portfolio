@@ -305,3 +305,16 @@ label {
   font-weight: bold;
   width: 90%;
 }
+
+.submit {
+  font-size: 5rem;
+  background-color: #f2edeb;
+  text-transform: uppercase;
+  border: 5px solid #2b3b36;
+  padding: 1rem;
+  margin: 0 auto;
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
