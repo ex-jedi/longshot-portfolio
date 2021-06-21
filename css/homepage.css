@@ -36,7 +36,7 @@
 }
 .section-one {
   padding: 20rem;
-  background-color: #F2EDEB;
+  background-color: #f2edeb;
 }
 
 .section-one-wrapper {
@@ -81,7 +81,7 @@
 }
 
 .intro-text {
-  color: #2B3B36;
+  color: #2b3b36;
 }
 
 .intro-image-wrapper {
@@ -151,8 +151,8 @@
 
 .contact-section {
   padding: 20rem 28rem;
-  background-color: #F2EDEB;
-  color: #2B3B36;
+  background-color: #f2edeb;
+  color: #2b3b36;
 }
 
 label {
@@ -184,13 +184,13 @@ label {
   background-color: transparent;
   border: 0;
   padding: 0;
-  border-bottom: 4px solid #2B3B36;
+  border-bottom: 4px solid #2b3b36;
 }
 
 .text-area-label {
   position: absolute;
   top: -1rem;
-  background-color: #F2EDEB;
+  background-color: #f2edeb;
   padding-right: 3rem;
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
@@ -201,15 +201,15 @@ label {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-size: 5rem;
-  color: #2B3B36;
+  color: #2b3b36;
   text-indent: 24rem;
   border: 0;
   padding: 0;
   resize: none;
   line-height: 4.4rem;
   background-attachment: local;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #F2EDEB), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F2EDEB), color-stop(0, transparent)), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #2B3B36 1.8rem, #2B3B36 4.4rem, #F2EDEB 1.85rem);
-  background-image: linear-gradient(to right, #F2EDEB 0, transparent 0), linear-gradient(to left, #F2EDEB 0, transparent 0), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #2B3B36 1.8rem, #2B3B36 4.4rem, #F2EDEB 1.85rem);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f2edeb), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #f2edeb), color-stop(0, transparent)), repeating-linear-gradient(#f2edeb, #f2edeb 4rem, #2b3b36 1.8rem, #2b3b36 4.4rem, #f2edeb 1.85rem);
+  background-image: linear-gradient(to right, #f2edeb 0, transparent 0), linear-gradient(to left, #f2edeb 0, transparent 0), repeating-linear-gradient(#f2edeb, #f2edeb 4rem, #2b3b36 1.8rem, #2b3b36 4.4rem, #f2edeb 1.85rem);
 }
 .text-area-input::-webkit-scrollbar {
   width: 1rem;
@@ -221,18 +221,87 @@ label {
   border-radius: 10px;
 }
 .text-area-input::-webkit-scrollbar-thumb:hover {
-  background-color: #2B3B36;
+  background-color: #2b3b36;
 }
 .text-area-input::-webkit-scrollbar-track {
-  background: #F2EDEB;
-  -webkit-box-shadow: inset 0 0 3px #F2EDEB;
-          box-shadow: inset 0 0 3px #F2EDEB;
+  background: #f2edeb;
+  -webkit-box-shadow: inset 0 0 3px #f2edeb;
+          box-shadow: inset 0 0 3px #f2edeb;
 }
 .text-area-input.active {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #F2EDEB), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F2EDEB), color-stop(0, transparent)), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #F2EDEB 1.8rem, #F2EDEB 4.4rem, #F2EDEB 1.85rem);
-  background-image: linear-gradient(to right, #F2EDEB 0, transparent 0), linear-gradient(to left, #F2EDEB 0, transparent 0), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #F2EDEB 1.8rem, #F2EDEB 4.4rem, #F2EDEB 1.85rem);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f2edeb), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #f2edeb), color-stop(0, transparent)), repeating-linear-gradient(#f2edeb, #f2edeb 4rem, #f2edeb 1.8rem, #f2edeb 4.4rem, #f2edeb 1.85rem);
+  background-image: linear-gradient(to right, #f2edeb 0, transparent 0), linear-gradient(to left, #f2edeb 0, transparent 0), repeating-linear-gradient(#f2edeb, #f2edeb 4rem, #f2edeb 1.8rem, #f2edeb 4.4rem, #f2edeb 1.85rem);
 }
 
 .fade-out {
   opacity: 0;
+}
+
+.checkbox-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.checkbox-div input {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0;
+  top: 0.5rem;
+}
+@media (max-width: 400px) {
+  .checkbox-div input {
+    top: 0.3rem;
+  }
+}
+.checkbox-div input:before {
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -3px;
+  margin-left: -5px;
+  border: 3px solid #2b3b36;
+  border-radius: 0.25em;
+  background: #f2edeb;
+}
+.checkbox-div input:after {
+  content: "";
+  position: absolute;
+  height: 0.8rem;
+  width: 2.3rem;
+  color: #2b3b36;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  top: 5px;
+  left: -1px;
+  -webkit-transform: rotate(-25deg) scale(0.75);
+          transform: rotate(-25deg) scale(0.75);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+  transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+}
+.checkbox-div input:checked:after {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+}
+.checkbox-div label {
+  text-transform: none;
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 90%;
 }

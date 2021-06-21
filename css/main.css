@@ -138,11 +138,11 @@ a {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: #2B3B36;
+  background-color: #2b3b36;
   padding: 2.5rem;
   margin: 0;
   font-size: 5rem;
-  color: #F2EDEB;
+  color: #f2edeb;
   border: none;
 }
 
