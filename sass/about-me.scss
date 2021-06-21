@@ -5,3 +5,38 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Header **
+//*=========================================
+
+.main-header {
+  background-color: $background-colour-light;
+}
+
+.about-me-header-content-wrapper {
+  @include flex(row);
+  padding: $section-spacing-small;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-me-header-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+  background-image: url('/images/gouache-wash-600.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+}
+
+.about-me-header-text {
+  font-size: $font-size-large;
+  color: $font-colour-brown;
+  font-weight: 500;
+}
+
+.about-me-header-image-wrapper {
+  flex: 0 1 auto;
+  width: 500px;
+}
