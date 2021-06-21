@@ -39,7 +39,7 @@
 					<!-- Skip to main content link  -->
 					<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 					<!-- For SVG logo. Delete if not needed -->
-					<?php perch_content("Main Logo"); ?>
+					<?php perch_content("White Logo"); ?>
 					<?php perch_layout("SVG/down-arrow"); ?>
 						<?php perch_pages_navigation(array(
 								'hide-extensions' => true,

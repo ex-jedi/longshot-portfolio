@@ -7,6 +7,31 @@
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
 //*=========================================
+//** Header **
+//*=========================================
+.main-header {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+}
+
+//********** Main Logo **********
+.main-logo {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.down-arrow-svg {
+  position: absolute;
+  top: 80%;
+  animation: brignell-bounce 2s ease-in-out infinite normal forwards;
+}
+
+//*=========================================
 //** Section One **
 //*=========================================
 

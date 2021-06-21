@@ -96,38 +96,6 @@ a {
   color: #3c3cf6;
 }
 
-.main-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  z-index: 4;
-}
-
-.main-logo {
-  width: 80%;
-  max-width: 1000px;
-}
-
-.down-arrow-svg {
-  position: absolute;
-  top: 80%;
-  -webkit-animation: brignell-bounce 2s ease-in-out infinite normal forwards;
-          animation: brignell-bounce 2s ease-in-out infinite normal forwards;
-}
-
 .main-nav {
   display: none;
 }
