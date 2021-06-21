@@ -93,6 +93,23 @@ a {
   color: $link-colour;
 }
 
+//*=========================================
+//** Header **
+//*=========================================
+.main-header {
+  @include flex(column);
+  position: relative;
+  width: 100vw;
+  z-index: 4;
+}
+
+//********** Main Logo **********
+.main-logo {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 // *=========================================
 // ** Main Nav  **
 // *=========================================
