@@ -189,9 +189,11 @@ label {
 
 .text-area-label {
   position: absolute;
-  top: 10px;
+  top: -1rem;
   background-color: #F2EDEB;
   padding-right: 3rem;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .text-area-input {
@@ -229,4 +231,8 @@ label {
 .text-area-input.active {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #F2EDEB), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F2EDEB), color-stop(0, transparent)), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #F2EDEB 1.8rem, #F2EDEB 4.4rem, #F2EDEB 1.85rem);
   background-image: linear-gradient(to right, #F2EDEB 0, transparent 0), linear-gradient(to left, #F2EDEB 0, transparent 0), repeating-linear-gradient(#F2EDEB, #F2EDEB 4rem, #F2EDEB 1.8rem, #F2EDEB 4.4rem, #F2EDEB 1.85rem);
+}
+
+.fade-out {
+  opacity: 0;
 }

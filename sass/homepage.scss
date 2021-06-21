@@ -138,9 +138,10 @@ label {
 
 .text-area-label {
   position: absolute;
-  top: 10px;
+  top: -1rem;
   background-color: $background-colour-light;
   padding-right: $font-size-small;
+  transition: opacity 0.2s ease-out;
 }
 
 .text-area-input {
@@ -197,4 +198,8 @@ label {
         $background-colour-light 1.85rem
       );
   }
+}
+
+.fade-out {
+  opacity: 0;
 }
