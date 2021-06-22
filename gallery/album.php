@@ -12,3 +12,4 @@
 </main>
 <?php perch_layout('gallery-album-footer'); ?>
 <?php perch_layout('gallery-album-footer-end'); ?>
+<?php PerchUtil::output_debug(); ?>

@@ -77,6 +77,10 @@ https://flickity.metafizzy.co
   cursor: grabbing;
 }
 
+.gallery-album-section {
+  position: relative;
+}
+
 .gallery-index {
   background-color: #f2edeb;
 }
@@ -189,4 +193,8 @@ https://flickity.metafizzy.co
   width: auto;
   max-height: 95vh;
   margin: auto;
+}
+
+.scroll-svg-arrow-wrapper {
+  position: absolute;
 }
