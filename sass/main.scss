@@ -117,7 +117,34 @@ a {
 // *=========================================
 
 .main-nav {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/from-orkney-2000.png');
+  background-color: $background-colour-light;
+  z-index: 4;
+}
+
+.main-nav-link {
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-green;
+  text-decoration: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+#main-nav-current {
   display: none;
+  visibility: hidden;
 }
 
 .main-nav-trigger {
@@ -148,6 +175,8 @@ a {
 }
 
 //********** Responsive Styles **********
+
+
 
 // *=========================================
 // ** Body **
