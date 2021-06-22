@@ -5,3 +5,25 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.gallery-header {
+  background-color: $background-colour-light;
+  padding: $paragraph-spacing-medium 0 $section-spacing-extra-small;
+}
+
+.gallery-index-wrapper {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $background-colour-light;
+  padding-bottom: $section-spacing-extra-small;
+
+}
+
+.gallery-index-album {
+  margin-right: $section-spacing-extra-small;
+
+  &:first-of-type {
+    margin-left: $section-spacing-medium;
+  }
+}

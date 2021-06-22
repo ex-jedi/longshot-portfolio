@@ -34,3 +34,32 @@
             transform: translateY(0);
   }
 }
+.gallery-header {
+  background-color: #f2edeb;
+  padding: 2.5rem 0 10rem;
+}
+
+.gallery-index-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2edeb;
+  padding-bottom: 10rem;
+}
+
+.gallery-index-album {
+  margin-right: 10rem;
+}
+.gallery-index-album:first-of-type {
+  margin-left: 28rem;
+}
