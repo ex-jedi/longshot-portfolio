@@ -6,6 +6,10 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+.gallery-index {
+  background-color: $background-colour-light;
+}
+
 .gallery-header {
   background-color: $background-colour-light;
   padding: $paragraph-spacing-medium 0 $section-spacing-extra-small;
@@ -17,13 +21,31 @@
   align-items: center;
   background-color: $background-colour-light;
   padding-bottom: $section-spacing-extra-small;
-
+  margin-bottom: $section-spacing-tiny;
+  overflow: scroll;
 }
 
 .gallery-index-album {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex: 1 0 auto;
   margin-right: $section-spacing-extra-small;
-
   &:first-of-type {
     margin-left: $section-spacing-medium;
   }
+}
+
+.gallery-index-sub-heading {
+  font-size: $font-size-medium-large;
+  font-weight: 500;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin: 0;
+}
+
+.gallery-index-link {
+  color: $font-colour-green;
+  text-decoration: none;
 }

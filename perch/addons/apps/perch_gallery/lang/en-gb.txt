@@ -122,5 +122,7 @@
     "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it.": "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it.",
     "Abstractions": "Abstractions",
     "": "",
-    "Nature": "Nature"
+    "Nature": "Nature",
+    "Another": "Another",
+    "Additional": "Additional"
 }
