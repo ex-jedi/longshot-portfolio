@@ -4,11 +4,12 @@
   "description": "longshot-portfolio",
   "main": "index.js",
   "dependencies": {
+    "flickity": "^2.2.2",
     "gsap": "^3.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-wesbos": "^1.0.1",
