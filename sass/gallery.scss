@@ -5,6 +5,7 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+@use 'flickity' as *; //Contains variables, media queries mixins etc.
 
 .gallery-index {
   background-color: $background-colour-light;
