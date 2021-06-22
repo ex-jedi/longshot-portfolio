@@ -11,7 +11,7 @@
 </section>
 </main>
 <?php perch_layout('empty-footer'); ?>
-<?php perch_layout('gallery-album-footer-end'); ?>
+<?php perch_layout('gallery-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <?php PerchUtil::output_debug(); ?>
 <!-- TODO: Validate HTML -->

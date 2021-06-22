@@ -162,14 +162,21 @@ a {
   font-weight: 500;
   color: #2b3b36;
   text-decoration: none;
+  text-transform: uppercase;
+  padding: 2.5rem;
+  margin: 10rem;
 }
-.main-nav-link:not(:last-of-type) {
-  margin-bottom: 20rem;
+.main-nav-link:nth-child(1) {
+  outline: 2px dotted #f00;
+}
+.main-nav-link:nth-child(2) {
+  outline: 2px dotted #0f0;
 }
 
 #main-nav-current {
   display: none;
   visibility: hidden;
+  margin: 0;
 }
 
 .main-nav-trigger {

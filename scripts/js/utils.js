@@ -20,6 +20,27 @@ function textArealabelHide() {
   textAreaInput.addEventListener('scroll', textAreaScrollHandler);
 }
 
+// *=========================================
+// ** Main nav background swap  **
+// *=========================================
+
+function navBackgroundSwap() {
+  // const mainNav = document.querySelector('.main-nav');
+  // const mainNavLink = document.querySelectorAll('.main-nav-link');
+  // const backgroundImageOne = "url('/images/from-orkney-2000.png')";
+  // const backgroundImageTwo = "url('/images/beech.jpg')";
+  // mainNav.style.backgroundImage = backgroundImageOne;
+  // function backgroundSwapHandler() {
+  //   console.log(mainNav.style.backgroundImage);
+  //   if (mainNav.style.backgroundImage === backgroundImageOne) {
+  //     mainNav.style.backgroundImage = backgroundImageTwo;
+  //   } else if (mainNav.style.backgroundImage === backgroundImageTwo) {
+  //     mainNav.style.backgroundImage = backgroundImageOne;
+  //   }
+  // }
+  // mainNavLink.forEach((link) => link.addEventListener('mouseenter', backgroundSwapHandler));
+}
+
 // ********** Console Log Elements Wider Then Viewport **********
 // const docWidth = document.documentElement.offsetWidth;
 
@@ -35,4 +56,4 @@ function textArealabelHide() {
 // ** Exports  **
 // *==============================================================================
 
-export { textArealabelHide };
+export { textArealabelHide, navBackgroundSwap };

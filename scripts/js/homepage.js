@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
-import { textArealabelHide } from './utils';
+import { textArealabelHide, navBackgroundSwap } from './utils';
 
 // *==============================================================================
 // ** Page JS  **
@@ -15,3 +15,9 @@ import { textArealabelHide } from './utils';
 // ********** Homepage Parallax **********
 
 textArealabelHide();
+
+// ********** Nav Background Swap **********
+
+const currentPage = document.querySelector('#main-nav-current');
+console.log(currentPage);
+currentPage.remove();
