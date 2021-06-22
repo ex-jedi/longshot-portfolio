@@ -436,6 +436,9 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .visually-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
