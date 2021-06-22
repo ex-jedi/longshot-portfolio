@@ -21,6 +21,16 @@ function textArealabelHide() {
 }
 
 // *=========================================
+// ** Nav Trigger  **
+// *=========================================
+
+function openClosenav() {
+  const mainNav = document.querySelector('.main-nav');
+  const mainNavTrigger = document.querySelector('#main-nav-trigger');
+  mainNavTrigger.addEventListener('click', () => (mainNav.style.transform = 'translateX(0)'));
+}
+
+// *=========================================
 // ** Main nav background swap  **
 // *=========================================
 
@@ -58,4 +68,4 @@ function navBackgroundSwap() {
 // ** Exports  **
 // *==============================================================================
 
-export { textArealabelHide, navBackgroundSwap };
+export { textArealabelHide, navBackgroundSwap, openClosenav };
