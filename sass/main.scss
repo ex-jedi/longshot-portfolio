@@ -173,6 +173,11 @@ a {
   border: none;
   padding: $section-spacing-tiny;
   margin: $section-spacing-extra-small;
+  transition: all .6s ease;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
 }
 
 .sideways-text {
