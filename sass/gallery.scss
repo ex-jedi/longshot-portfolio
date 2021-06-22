@@ -17,6 +17,8 @@
 
 .gallery-index-wrapper {
   @include flex(row);
+  @include styled-scrollbar(0, $font-colour-green, $background-colour-light, $background-colour-light);
+
   justify-content: flex-start;
   align-items: center;
   background-color: $background-colour-light;
