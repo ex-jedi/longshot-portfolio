@@ -195,6 +195,15 @@ a {
   color: #f2edeb;
 }
 
+#main-nav-closer {
+  height: 150px;
+  width: 150px;
+  background-color: transparent;
+  border: none;
+  padding: 2.5rem;
+  margin: 10rem;
+}
+
 .sideways-text {
   display: block;
   -webkit-box-align: stretch;

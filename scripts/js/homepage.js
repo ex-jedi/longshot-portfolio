@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
-import { textArealabelHide, navBackgroundSwap, openClosenav } from './utils';
+import { textArealabelHide, navBackgroundSwap, openCloseNav } from './utils';
 
 // *==============================================================================
 // ** Page JS  **
@@ -21,4 +21,4 @@ textArealabelHide();
 navBackgroundSwap();
 
 // ********** Nav **********
-openClosenav();
+openCloseNav();

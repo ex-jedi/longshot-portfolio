@@ -24,10 +24,14 @@ function textArealabelHide() {
 // ** Nav Trigger  **
 // *=========================================
 
-function openClosenav() {
+function openCloseNav() {
   const mainNav = document.querySelector('.main-nav');
   const mainNavTrigger = document.querySelector('#main-nav-trigger');
+  const mainNavCloser = document.querySelector('#main-nav-closer ');
+
   mainNavTrigger.addEventListener('click', () => (mainNav.style.transform = 'translateX(0)'));
+
+  mainNavCloser.addEventListener('click', () => (mainNav.style.transform = 'translateX(-100%)'));
 }
 
 // *=========================================
@@ -68,4 +72,4 @@ function navBackgroundSwap() {
 // ** Exports  **
 // *==============================================================================
 
-export { textArealabelHide, navBackgroundSwap, openClosenav };
+export { textArealabelHide, navBackgroundSwap, openCloseNav };

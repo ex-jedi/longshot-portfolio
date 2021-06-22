@@ -165,6 +165,15 @@ a {
   color: $font-colour-light;
 }
 
+#main-nav-closer {
+  height: 150px;
+  width: 150px;
+  background-color: transparent;
+  border: none;
+  padding: $section-spacing-tiny;
+  margin: $section-spacing-extra-small;
+}
+
 .sideways-text {
   display: block;
   align-items: stretch;

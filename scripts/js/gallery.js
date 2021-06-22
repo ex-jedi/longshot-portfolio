@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 import { flickityInit } from './lib';
-import { navBackgroundSwap } from './utils';
+import { navBackgroundSwap, openCloseNav } from './utils';
 
 // *=========================================
 // ** Flickity  **
@@ -11,3 +11,5 @@ import { navBackgroundSwap } from './utils';
 flickityInit();
 
 navBackgroundSwap();
+
+openCloseNav();

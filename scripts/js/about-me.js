@@ -1,6 +1,8 @@
 // *==============================================================================
 // ** Imports  **
 // *==============================================================================
-import { navBackgroundSwap } from './utils';
+import { navBackgroundSwap, openCloseNav } from './utils';
 
 navBackgroundSwap();
+
+openCloseNav();
