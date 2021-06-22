@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "flickity": "^2.2.2",
+    "flickity-imagesloaded": "^2.0.0",
     "gsap": "^3.7.0"
   },
   "devDependencies": {
