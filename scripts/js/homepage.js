@@ -18,6 +18,4 @@ textArealabelHide();
 
 // ********** Nav Background Swap **********
 
-const currentPage = document.querySelector('#main-nav-current');
-console.log(currentPage);
-currentPage.remove();
+navBackgroundSwap();

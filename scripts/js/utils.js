@@ -25,20 +25,22 @@ function textArealabelHide() {
 // *=========================================
 
 function navBackgroundSwap() {
-  // const mainNav = document.querySelector('.main-nav');
-  // const mainNavLink = document.querySelectorAll('.main-nav-link');
-  // const backgroundImageOne = "url('/images/from-orkney-2000.png')";
-  // const backgroundImageTwo = "url('/images/beech.jpg')";
-  // mainNav.style.backgroundImage = backgroundImageOne;
-  // function backgroundSwapHandler() {
-  //   console.log(mainNav.style.backgroundImage);
-  //   if (mainNav.style.backgroundImage === backgroundImageOne) {
-  //     mainNav.style.backgroundImage = backgroundImageTwo;
-  //   } else if (mainNav.style.backgroundImage === backgroundImageTwo) {
-  //     mainNav.style.backgroundImage = backgroundImageOne;
-  //   }
-  // }
-  // mainNavLink.forEach((link) => link.addEventListener('mouseenter', backgroundSwapHandler));
+  const currentPage = document.querySelector('#main-nav-current');
+  console.log(currentPage);
+  currentPage.remove();
+
+  const mainNav = document.querySelector('.main-nav');
+
+  const firstMenuLink = document.querySelector('.main-nav-link:nth-child(1)');
+  const secondMenuLink = document.querySelector('.main-nav-link:nth-child(2)');
+
+  firstMenuLink.addEventListener('mouseover', () => {
+    mainNav.style.backgroundImage = "url('/images/from-orkney-2000.png')";
+  });
+
+  secondMenuLink.addEventListener('mouseover', () => {
+    mainNav.style.backgroundImage = "url('/images/beech.jpg')";
+  });
 }
 
 // ********** Console Log Elements Wider Then Viewport **********

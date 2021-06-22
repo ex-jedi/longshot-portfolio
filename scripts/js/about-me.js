@@ -1,3 +1,6 @@
-const currentPage = document.querySelector('#main-nav-current');
-console.log(currentPage);
-currentPage.remove();
+// *==============================================================================
+// ** Imports  **
+// *==============================================================================
+import { navBackgroundSwap } from './utils';
+
+navBackgroundSwap();

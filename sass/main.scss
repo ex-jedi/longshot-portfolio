@@ -129,6 +129,7 @@ a {
   background-image: url('/images/from-orkney-2000.png');
   background-color: $background-colour-light;
   z-index: 4;
+  transition: all .6s ease;
 }
 
 .main-nav-link {
@@ -139,14 +140,6 @@ a {
   text-transform: uppercase;
   padding: $section-spacing-tiny;
   margin: $section-spacing-extra-small;
-
-  &:nth-child(1){
-    outline: 2px dotted  #f00;
-  }
-
-  &:nth-child(2){
-    outline: 2px dotted  #0f0;
-  }
 }
 
 #main-nav-current {
