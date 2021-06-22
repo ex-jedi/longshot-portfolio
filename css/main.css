@@ -110,7 +110,7 @@ a {
 }
 
 .main-logo {
-  width: 80%;
+  width: 50%;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -121,6 +121,9 @@ a {
 
 .main-nav-trigger {
   position: fixed;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -135,6 +138,10 @@ a {
 }
 
 .sideways-text {
+  display: block;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -285,20 +292,20 @@ label {
   height: 3rem;
   margin-top: -3px;
   margin-left: -5px;
-  border: 3px solid #2b3b36;
+  border: 4px solid #2b3b36;
   border-radius: 0.25em;
   background: #f2edeb;
 }
 .checkbox-div input:after {
   content: "";
   position: absolute;
-  height: 0.8rem;
-  width: 2.3rem;
+  height: 0.9rem;
+  width: 2.1rem;
   color: #2b3b36;
-  border-left: 2px solid;
-  border-bottom: 2px solid;
-  top: 5px;
-  left: -1px;
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+  top: 6px;
+  left: 0;
   -webkit-transform: rotate(-25deg) scale(0.75);
           transform: rotate(-25deg) scale(0.75);
   opacity: 0;
@@ -409,4 +416,10 @@ body:not(.user-is-tabbing) textarea:focus {
 .user-is-tabbing input:focus,
 .user-is-tabbing textarea:focus {
   outline: 3px dashed #ff5e00;
+}
+
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  .sideways-text {
+    width: 60px;
+  }
 }
