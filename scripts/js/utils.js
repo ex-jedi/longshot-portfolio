@@ -29,9 +29,15 @@ function openCloseNav() {
   const mainNavTrigger = document.querySelector('#main-nav-trigger');
   const mainNavCloser = document.querySelector('#main-nav-closer ');
 
-  mainNavTrigger.addEventListener('click', () => (mainNav.style.transform = 'translateX(0)'));
+  mainNavTrigger.addEventListener('click', () => {
+    mainNav.style.transform = 'translateX(0)';
+    mainNav.style.opacity = 1;
+  });
 
-  mainNavCloser.addEventListener('click', () => (mainNav.style.transform = 'translateX(-100%)'));
+  mainNavCloser.addEventListener('click', () => {
+    mainNav.style.transform = 'translateX(-100%)';
+    mainNav.style.opacity = 0;
+  });
 }
 
 // *=========================================
