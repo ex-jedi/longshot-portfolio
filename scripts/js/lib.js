@@ -13,7 +13,7 @@ function flickityInit() {
   const carousel = document.querySelector('.gallery-carousel');
   const flkty = new Flickity(carousel, {
     imagesLoaded: true,
-    autoPlay: 3000,
+    autoPlay: 5000,
     prevNextButtons: false,
     wrapAround: true,
     selectedAttraction: 0.006,

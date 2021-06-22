@@ -197,4 +197,126 @@ https://flickity.metafizzy.co
 
 .scroll-svg-arrow-wrapper {
   position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15rem;
+}
+.scroll-svg-arrow-wrapper svg {
+  width: 200px;
+  height: 200px;
+}
+.scroll-svg-arrow-wrapper #Text {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotateSvg 4s linear forwards;
+          animation: rotateSvg 4s linear forwards;
+}
+.scroll-svg-arrow-wrapper #Arrow {
+  -webkit-animation: fadeSvg 4s linear forwards;
+          animation: fadeSvg 4s linear forwards;
+}
+
+@-webkit-keyframes rotateSvg {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateSvg {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeSvg {
+  10% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  20% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  30% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  40% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  50% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  60% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  70% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeSvg {
+  10% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  20% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  30% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  40% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  50% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  60% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  70% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.empty-footer {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
