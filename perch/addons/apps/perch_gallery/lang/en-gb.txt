@@ -119,5 +119,6 @@
     "A second album": "A second album",
     "Save Changes": "Save Changes",
     "Deleting an album": "Deleting an album",
-    "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it.": "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it."
+    "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it.": "Are you sure you wish to delete \u201c%s\u201d? This will also remove all images contained within it.",
+    "Abstractions": "Abstractions"
 }
