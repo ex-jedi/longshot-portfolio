@@ -445,6 +445,18 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 }
 
+//********** Visually Hidden  **********
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 //*=========================================
 //** Browser Specific Styles **
 //*=========================================

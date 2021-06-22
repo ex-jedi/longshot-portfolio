@@ -2,7 +2,7 @@
 <?php perch_layout('gallery-header'); ?>
 <main id="main-content" class="main-content gallery-main-content">
 		<section class="gallery-index-section">
-			<h2 class="section-heading gallery-section-heading">
+			<h2 class="visually-hidden">
 				Galleries
 			</h2>
 		<div class="gallery-index-wrapper">
