@@ -21,7 +21,7 @@
 
 //********** Main Logo **********
 .main-logo {
-  width: 80%;
+  width: 60%;
   max-width: 1000px;
 }
 
@@ -42,6 +42,10 @@
 
   @include breakpoint(1700) {
     padding: $section-spacing-small $section-spacing-smaller;
+  }
+
+  @include breakpoint(1250) {
+    padding: $section-spacing-smaller $section-spacing-extra-small;
   }
 }
 

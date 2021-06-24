@@ -55,7 +55,7 @@
 }
 
 .main-logo {
-  width: 80%;
+  width: 60%;
   max-width: 1000px;
 }
 
@@ -74,6 +74,11 @@
 @media (max-width: 1700px) {
   .section-one {
     padding: 20rem 15rem;
+  }
+}
+@media (max-width: 1250px) {
+  .section-one {
+    padding: 15rem 10rem;
   }
 }
 
