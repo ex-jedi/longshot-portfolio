@@ -24,7 +24,7 @@
   width: 60%;
   max-width: 1000px;
 
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     width: 90%;
   }
 }
@@ -44,12 +44,16 @@
   background-color: $background-colour-light;
   font-weight: 500;
 
-  @include breakpoint(1700) {
+  @include breakpoint(1750) {
     padding: $section-spacing-small $section-spacing-smaller;
   }
 
   @include breakpoint(1300) {
     padding: $section-spacing-smaller $section-spacing-extra-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny;
   }
 }
 
@@ -75,6 +79,10 @@
   @include breakpoint(1600) {
     font-size: $font-size-medium-large;
   }
+
+  @include breakpoint(800) {
+    font-size: $font-size-medium;
+  }
 }
 
 .section-one-image {
@@ -89,6 +97,10 @@
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-extra-small;
   }
+
+  @include breakpoint(750) {
+    margin-bottom: calc(#{$section-spacing-extra-small} / 2);
+  }
 }
 
 .intro-text-wrapper {
@@ -99,6 +111,10 @@
     width: 100%;
     text-align: center;
     margin: 0 auto $section-spacing-smaller;
+  }
+
+  @include breakpoint(750) {
+    margin: 0 auto $section-spacing-extra-small;
   }
 }
 
@@ -135,6 +151,11 @@
     padding: $paragraph-spacing-large $paragraph-spacing-large
       $section-spacing-smaller;
   }
+
+  @include breakpoint(750) {
+    padding: calc(#{$section-spacing-extra-small} / 2) $section-spacing-tiny;
+    margin-bottom: calc(#{$section-spacing-extra-small} / 2);
+  }
 }
 
 .bio-text {
@@ -169,7 +190,7 @@
   flex: 1 1 auto;
   margin: 0;
   padding: 0;
-  width: 350px;
+  width: 375px;
 }
 
 .full-width-gallery-image-wrapper {

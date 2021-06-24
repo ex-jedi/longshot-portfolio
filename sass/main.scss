@@ -158,7 +158,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   padding: $section-spacing-tiny;
-  margin: $section-spacing-extra-small;
+  margin: $section-spacing-extra-small auto;
 }
 
 #main-nav-current {
@@ -175,7 +175,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
 
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     @include flex(col);
     align-items: center;
     justify-content: center;
@@ -201,7 +201,7 @@ a {
     font-size: $font-size-small;
   }
 
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     padding: $paragraph-spacing-small $paragraph-spacing-medium;
   }
 }
@@ -230,7 +230,7 @@ a {
   padding: 0;
   //* Writing mode doesn't work on buttons it seems. Span added for sideways text
 
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     writing-mode: horizontal-tb;
     transform: rotate(0);
   }
@@ -261,7 +261,7 @@ select {
   background-color: $background-colour-light;
   color: $font-colour-green;
 
-  @include breakpoint(1700) {
+  @include breakpoint(1750) {
     padding: $section-spacing-small $section-spacing-smaller;
   }
 
@@ -278,6 +278,10 @@ label {
   font-size: $font-size-medium;
   margin-right: $font-size-small;
   font-weight: 500;
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
 }
 
 .input-and-label-div {
@@ -429,18 +433,23 @@ label {
       // outline: none;
       border-radius: 0.25em;
       background: $background-colour-light;
+
+      @include breakpoint(800) {
+        width: $font-size-tiny;
+        height: $font-size-tiny;
+      }
     }
 
     &:after {
       content: '';
       position: absolute;
-      height: 0.9rem;
-      width: 2.6rem;
+      height: 0.7rem;
+      width: 1.6rem;
       color: $font-colour-green;
       border-left: 4px solid;
       border-bottom: 4px solid;
-      top: 10px;
-      left: 1px;
+      top: 5px;
+      left: 0;
       transform: rotate(-25deg) scale(0.75);
       opacity: 0;
       transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
@@ -458,6 +467,10 @@ label {
     font-size: $font-size-tiny;
     font-weight: 400;
     width: 90%;
+
+    @include breakpoint(800) {
+      font-size: $font-size-really-tiny;
+    }
   }
 }
 
@@ -613,7 +626,7 @@ body:not(.user-is-tabbing) textarea:focus {
   .sideways-text {
     width: 50px;
 
-    @include breakpoint(700) {
+    @include breakpoint(750) {
       width: auto;
     }
   }
