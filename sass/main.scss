@@ -65,6 +65,10 @@ h3 {
   @include breakpoint(1300) {
     margin: 0 auto $heading-spacing-medium;
   }
+
+  @include breakpoint(750) {
+    margin: 0 auto $heading-spacing-small;
+  }
 }
 
 //********** Containers **********
@@ -270,7 +274,7 @@ select {
   }
 
   @include breakpoint(750) {
-    padding: $section-spacing-small $section-spacing-tiny;
+    padding: $section-spacing-extra-small $section-spacing-tiny;
   }
 }
 
