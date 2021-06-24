@@ -93,13 +93,13 @@
 
   @include breakpoint(1300) {
     width: 100%;
+    text-align: center;
     margin: 0 auto $section-spacing-smaller;
   }
 }
 
 .intro-text {
   color: $font-colour-green;
-  text-align: center;
   margin: 0 auto;
 }
 
@@ -123,6 +123,10 @@
   background-repeat: no-repeat;
   width: 50%;
   padding: $paragraph-spacing-large;
+
+  @include breakpoint(1300) {
+    @include flex(column);
+  }
 }
 
 .bio-text {
