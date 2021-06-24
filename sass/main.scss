@@ -198,11 +198,15 @@ a {
   @include breakpoint(1600) {
     font-size: $font-size-small;
   }
+
+  @include breakpoint(700) {
+    padding: $paragraph-spacing-small $paragraph-spacing-medium;
+  }
 }
 
 #main-nav-closer {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   background-color: transparent;
   border: none;
   padding: $section-spacing-tiny;
@@ -605,6 +609,10 @@ body:not(.user-is-tabbing) textarea:focus {
 
 @media not all and (min-resolution: 0.001dpcm) {
   .sideways-text {
-    width: 60px;
+    width: 50px;
+
+    @include breakpoint(700) {
+      width: auto;
+    }
   }
 } // IOS Styles End
