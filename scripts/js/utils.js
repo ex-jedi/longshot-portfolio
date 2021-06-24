@@ -45,17 +45,31 @@ function openCloseNav() {
 // *=========================================
 
 function navBackgroundSwap() {
+  // Get current page nav link and remove it from the DOM so you can use :nth-child to select remaining nav links
   const currentPage = document.querySelector('#main-nav-current');
-  console.log(currentPage);
   currentPage.remove();
 
+  // Get main nav and menu links
   const mainNav = document.querySelector('.main-nav');
-
   const firstMenuLink = document.querySelector('.main-nav-link:nth-child(1)');
   const secondMenuLink = document.querySelector('.main-nav-link:nth-child(2)');
 
+  // Set media queries so you can load correct size backgrounds
+  const bigScreen = window.matchMedia('(min-width: 1201px)');
+  const mediumScreen = window.matchMedia('(max-width: 1200px)');
+  const smallerScreen = window.matchMedia('(max-width: 900px)');
+  const smallScreen = window.matchMedia('(max-width: 600px)');
+
   firstMenuLink.addEventListener('mouseover', () => {
-    mainNav.style.backgroundImage = "url('/images/from-orkney-2000.png')";
+    if (smallScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/from-orkney-600.png')";
+    } else if (smallerScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/from-orkney-900.png')";
+    } else if (mediumScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/from-orkney-1200.png')";
+    } else if (bigScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/from-orkney-2000.png')";
+    }
   });
 
   secondMenuLink.addEventListener('mouseover', () => {
