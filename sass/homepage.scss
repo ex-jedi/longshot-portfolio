@@ -23,6 +23,10 @@
 .main-logo {
   width: 60%;
   max-width: 1000px;
+
+  @include breakpoint(700) {
+    width: 90%;
+  }
 }
 
 .down-arrow-svg {
