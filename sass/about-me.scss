@@ -10,7 +10,7 @@
 //** Header **
 //*=========================================
 
-.main-header {
+.about-me-header {
   background-color: $background-colour-light;
   padding-top: $paragraph-spacing-medium;
 }
@@ -20,6 +20,10 @@
   padding: $section-spacing-small $section-spacing-small 0;
   justify-content: space-around;
   align-items: center;
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-smaller 0;
+  }
 }
 
 .about-me-header-text-wrapper {
