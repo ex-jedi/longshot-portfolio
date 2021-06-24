@@ -51,4 +51,8 @@
   color: $font-colour-brown;
   font-size: $font-size-medium;
   padding: $section-spacing-small $section-spacing-extra-large 0;
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-large 0;
+  }
 }
