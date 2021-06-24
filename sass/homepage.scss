@@ -39,6 +39,10 @@
   padding: $section-spacing-small;
   background-color: $background-colour-light;
   font-weight: 500;
+
+  @include breakpoint(1700) {
+    padding: $section-spacing-small $section-spacing-smaller;
+  }
 }
 
 .section-one-wrapper {
@@ -55,6 +59,10 @@
 .section-one-text {
   font-size: $font-size-large;
   margin: 0;
+
+  @include breakpoint(1600) {
+    font-size: $font-size-medium-large;
+  }
 }
 
 .section-one-image {

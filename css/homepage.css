@@ -71,6 +71,11 @@
   background-color: #f2edeb;
   font-weight: 500;
 }
+@media (max-width: 1700px) {
+  .section-one {
+    padding: 20rem 15rem;
+  }
+}
 
 .section-one-wrapper {
   display: -webkit-box;
@@ -98,6 +103,11 @@
 .section-one-text {
   font-size: 10rem;
   margin: 0;
+}
+@media (max-width: 1600px) {
+  .section-one-text {
+    font-size: 7.5rem;
+  }
 }
 
 .section-one-image {
