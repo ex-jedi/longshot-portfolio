@@ -449,6 +449,12 @@ label {
   display: block;
   // appearance: none;
   font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $font-colour-light;
+    background-color: $background-colour-three;
+  }
 
   @include breakpoint(1600) {
     font-size: $font-size-small;
