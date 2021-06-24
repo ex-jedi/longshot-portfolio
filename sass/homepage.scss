@@ -53,6 +53,10 @@
   @include flex(row);
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint(1300) {
+    @include flex(column);
+  }
 }
 
 .section-one-image-wrapper,
@@ -86,14 +90,25 @@
 .intro-text-wrapper {
   width: 40%;
   margin-right: $section-spacing-extra-small;
+
+  @include breakpoint(1300) {
+    width: 100%;
+    margin: 0 auto $section-spacing-smaller;
+  }
 }
 
 .intro-text {
   color: $font-colour-green;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .intro-image-wrapper {
   width: 50%;
+
+  @include breakpoint(1300) {
+    width: 100%;
+  }
 }
 
 //********** Bio **********
