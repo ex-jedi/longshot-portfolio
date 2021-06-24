@@ -90,7 +90,7 @@ h3 {
     font-size: 7.5rem;
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .section-heading {
     margin: 0 auto 15rem;
   }
@@ -258,7 +258,7 @@ select {
     padding: 20rem 15rem;
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .contact-section {
     padding: 15rem 10rem;
   }
@@ -291,8 +291,18 @@ label {
           justify-content: flex-start;
   margin-bottom: 10rem;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .input-and-label-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-bottom: 7.5rem;
   }
 }
@@ -307,6 +317,11 @@ label {
   font-size: 5rem;
   color: inherit;
   font-weight: 500;
+}
+@media (max-width: 1300px) {
+  .input-and-label-div input {
+    width: 100%;
+  }
 }
 
 .text-area-label {
@@ -379,7 +394,7 @@ label {
 .checkbox-div:last-of-type {
   margin-bottom: 20rem;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .checkbox-div:last-of-type {
     margin-bottom: 15rem;
   }
