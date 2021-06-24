@@ -73,7 +73,15 @@ function navBackgroundSwap() {
   });
 
   secondMenuLink.addEventListener('mouseover', () => {
-    mainNav.style.backgroundImage = "url('/images/beech.jpg')";
+    if (smallScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/beech-600.jpg')";
+    } else if (smallerScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/beech-900.jpg')";
+    } else if (mediumScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/beech-1200.jpg')";
+    } else if (bigScreen.matches) {
+      mainNav.style.backgroundImage = "url('/images/beech-2000.jpg')";
+    }
   });
 }
 
