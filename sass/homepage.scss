@@ -77,6 +77,10 @@
 
 .intro-wrapper {
   margin-bottom: $section-spacing-small;
+
+  @include breakpoint(1250) {
+    margin-bottom: $section-spacing-smaller;
+  }
 }
 
 .intro-text-wrapper {

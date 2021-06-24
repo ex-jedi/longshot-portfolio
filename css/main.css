@@ -90,6 +90,11 @@ h3 {
     font-size: 7.5rem;
   }
 }
+@media (max-width: 1250px) {
+  .section-heading {
+    margin: 0 auto 15rem;
+  }
+}
 
 section,
 main {
@@ -253,6 +258,11 @@ select {
     padding: 20rem 15rem;
   }
 }
+@media (max-width: 1250px) {
+  .contact-section {
+    padding: 15rem 10rem;
+  }
+}
 
 .contact-form-heading {
   font-weight: 500;
@@ -280,6 +290,11 @@ label {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 10rem;
+}
+@media (max-width: 1250px) {
+  .input-and-label-div {
+    margin-bottom: 7.5rem;
+  }
 }
 .input-and-label-div input {
   -webkit-box-flex: 1;
@@ -353,13 +368,21 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.checkbox-div:last-of-type {
+  margin-bottom: 20rem;
+}
+@media (max-width: 1250px) {
+  .checkbox-div:last-of-type {
+    margin-bottom: 15rem;
+  }
 }
 .checkbox-div input {
   position: relative;
@@ -368,6 +391,7 @@ label {
   width: fit-content;
   font-size: 0;
   top: 0.5rem;
+  margin-right: 2rem;
 }
 @media (max-width: 400px) {
   .checkbox-div input {
@@ -389,12 +413,12 @@ label {
   content: "";
   position: absolute;
   height: 0.9rem;
-  width: 2.1rem;
+  width: 2.6rem;
   color: #2b3b36;
   border-left: 4px solid;
   border-bottom: 4px solid;
-  top: 6px;
-  left: 0;
+  top: 10px;
+  left: 1px;
   -webkit-transform: rotate(-25deg) scale(0.75);
           transform: rotate(-25deg) scale(0.75);
   opacity: 0;

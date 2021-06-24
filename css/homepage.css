@@ -122,6 +122,11 @@
 .intro-wrapper {
   margin-bottom: 20rem;
 }
+@media (max-width: 1250px) {
+  .intro-wrapper {
+    margin-bottom: 15rem;
+  }
+}
 
 .intro-text-wrapper {
   width: 40%;

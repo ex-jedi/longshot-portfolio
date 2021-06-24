@@ -61,6 +61,10 @@ h3 {
   @include breakpoint(1600) {
     font-size: $heading-size-medium;
   }
+
+  @include breakpoint(1250) {
+    margin: 0 auto $heading-spacing-medium;
+  }
 }
 
 //********** Containers **********
@@ -234,6 +238,10 @@ select {
   @include breakpoint(1700) {
     padding: $section-spacing-small $section-spacing-smaller;
   }
+
+  @include breakpoint(1250) {
+    padding: $section-spacing-smaller $section-spacing-extra-small;
+  }
 }
 
 .contact-form-heading {
@@ -251,7 +259,11 @@ label {
   position: relative;
   align-items: flex-end;
   justify-content: flex-start;
-  margin-bottom: $section-spacing-extra-small;
+  margin-bottom: $input-spacing-large;
+
+  @include breakpoint(1250) {
+    margin-bottom: $input-spacing-medium;
+  }
 
   input {
     flex: 1 1 auto;
@@ -338,15 +350,24 @@ label {
 
 .checkbox-div {
   @include flex(row);
-  margin-bottom: $section-spacing-small;
+  margin-bottom: $input-spacing-large;
   justify-content: space-between;
   align-items: flex-start;
+
+  &:last-of-type {
+    margin-bottom: $input-spacing-extra-large;
+
+    @include breakpoint(1250) {
+      margin-bottom: $input-spacing-larger;
+    }
+  }
 
   input {
     position: relative;
     width: fit-content;
     font-size: 0;
     top: 0.5rem;
+    margin-right: 2rem;
 
     @include breakpoint(400) {
       top: 0.3rem;
@@ -369,12 +390,12 @@ label {
       content: '';
       position: absolute;
       height: 0.9rem;
-      width: 2.1rem;
+      width: 2.6rem;
       color: $font-colour-green;
       border-left: 4px solid;
       border-bottom: 4px solid;
-      top: 6px;
-      left: 0;
+      top: 10px;
+      left: 1px;
       transform: rotate(-25deg) scale(0.75);
       opacity: 0;
       transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
