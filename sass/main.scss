@@ -538,6 +538,10 @@ label {
   padding: $paragraph-spacing-medium;
   text-align: center;
 
+  @include breakpoint(750) {
+    padding-bottom: $section-spacing-extra-small;
+  }
+
   a {
     color: inherit;
   }
@@ -556,6 +560,10 @@ label {
 
   @include breakpoint(1300) {
     margin: $section-spacing-smaller auto;
+  }
+
+  @include breakpoint(750) {
+    margin: $section-spacing-extra-small auto;
   }
 }
 
