@@ -165,13 +165,27 @@ a {
   margin: 0;
 }
 
-.main-nav-trigger {
+.main-nav-trigger-wrapper {
   //FIXME: Odd bit of spacing at the bottom
   position: fixed;
   width: fit-content;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+
+  @include breakpoint(700) {
+    @include flex(col);
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    top: unset;
+    transform: translateY(0);
+    width: 100%;
+    background-color: $background-colour-three;
+  }
+}
+
+.main-nav-trigger {
   background-color: $background-colour-three;
   padding: $paragraph-spacing-medium;
   margin: 0;
@@ -179,6 +193,7 @@ a {
   font-size: $font-size-medium;
   font-weight: 500;
   color: $font-colour-light;
+  cursor: pointer;
 
   @include breakpoint(1600) {
     font-size: $font-size-small;
@@ -208,6 +223,11 @@ a {
   margin: 0;
   padding: 0;
   //* Writing mode doesn't work on buttons it seems. Span added for sideways text
+
+  @include breakpoint(700) {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+  }
 }
 
 //********** Responsive Styles **********
