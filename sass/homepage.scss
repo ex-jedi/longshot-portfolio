@@ -83,7 +83,7 @@
   margin-bottom: $section-spacing-small;
 
   @include breakpoint(1300) {
-    margin-bottom: $section-spacing-smaller;
+    margin-bottom: $section-spacing-extra-small;
   }
 }
 
@@ -126,6 +126,10 @@
 
   @include breakpoint(1300) {
     @include flex(column);
+    width: 100%;
+    text-align: center;
+    padding: $paragraph-spacing-large $paragraph-spacing-large
+      $section-spacing-smaller;
   }
 }
 
@@ -135,6 +139,11 @@
 
 .bio-image-wrapper {
   width: 30%;
+
+  @include breakpoint(1300) {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 //*=========================================
