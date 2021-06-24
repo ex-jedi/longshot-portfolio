@@ -67,6 +67,7 @@ h3 {
   }
 
   @include breakpoint(750) {
+    font-size: $font-size-medium;
     margin: 0 auto $heading-spacing-small;
   }
 }
@@ -163,6 +164,10 @@ a {
   text-transform: uppercase;
   padding: $section-spacing-tiny;
   margin: $section-spacing-extra-small auto;
+
+  @include breakpoint(750) {
+    margin: $section-spacing-extra-small auto;
+  }
 }
 
 #main-nav-current {
@@ -303,6 +308,10 @@ label {
     @include flex(column);
     align-items: flex-start;
     margin-bottom: $input-spacing-medium;
+
+    @include breakpoint(750) {
+      margin-bottom: $input-spacing-small;
+    }
   }
 
   input {
@@ -498,7 +507,7 @@ label {
   padding: 1rem;
   margin: 0 auto;
   display: block;
-  // appearance: none;
+  appearance: none;
   font-weight: 500;
   transition: all 0.2s ease;
 
