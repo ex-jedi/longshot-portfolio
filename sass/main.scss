@@ -417,6 +417,10 @@ label {
     @include breakpoint(1300) {
       margin-bottom: $input-spacing-larger;
     }
+
+    @include breakpoint(750) {
+      margin-bottom: $input-spacing-large;
+    }
   }
 
   input {
@@ -549,6 +553,10 @@ label {
 
 .footer-legals {
   margin: $section-spacing-small auto;
+
+  @include breakpoint(1300) {
+    margin: $section-spacing-smaller auto;
+  }
 }
 
 //*=========================================
