@@ -289,11 +289,27 @@ label {
   background-color: $background-colour-light;
   padding-right: $font-size-small;
   transition: opacity 0.2s ease-out;
+
+  @include breakpoint(1300) {
+    position: relative;
+  }
 }
 
 .text-area-input {
+  text-indent: 24rem;
+  border: 0;
+  padding: 0;
+  resize: none;
+  line-height: 4.4rem;
+  background-attachment: local;
+
+  @include breakpoint(1300) {
+    text-indent: 0;
+  }
+
   // Custom Scrollbar
   flex: 1 1 auto;
+  width: 100%;
   font-size: $font-size-medium;
   font-weight: 500;
   color: $font-colour-green;
@@ -303,13 +319,6 @@ label {
     $background-colour-light,
     $background-colour-light
   );
-
-  text-indent: 24rem;
-  border: 0;
-  padding: 0;
-  resize: none;
-  line-height: 4.4rem;
-  background-attachment: local;
 
   // Text area underlining
   background-image: linear-gradient(
@@ -350,6 +359,10 @@ label {
 
 .fade-out {
   opacity: 0;
+
+  @include breakpoint(1300) {
+    opacity: 1;
+  }
 }
 
 //********** Checkbox **********
