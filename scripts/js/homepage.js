@@ -22,3 +22,5 @@ navBackgroundSwap();
 
 // ********** Nav **********
 openCloseNav();
+
+console.log('Homepage');

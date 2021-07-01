@@ -136,7 +136,7 @@ a {
 
 .main-nav {
   @include flex(column);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   top: 0;
@@ -163,11 +163,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   padding: $section-spacing-tiny;
-  margin: $section-spacing-extra-small auto;
-
-  @include breakpoint(750) {
-    margin: $paragraph-spacing-large auto;
-  }
+  margin: $section-spacing-tiny auto;
 }
 
 #main-nav-current {
@@ -225,7 +221,7 @@ a {
   background-color: transparent;
   border: none;
   padding: $section-spacing-tiny;
-  margin: $section-spacing-extra-small;
+  margin: $section-spacing-tiny auto;
   transition: all 0.6s ease;
 
   &:hover {
