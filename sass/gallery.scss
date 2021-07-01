@@ -91,7 +91,7 @@
 //*=========================================
 
 .gallery-album-section {
-  padding: 0 $section-spacing-smaller;
+  padding: 0 $section-spacing-tiny;
 }
 
 .carousel-cell {
@@ -103,8 +103,9 @@
 }
 
 .gallery-album-image {
-  width: auto;
-  max-height: 95vh;
+  width: 100%;
+  height: 90vh;
+  object-fit: contain;
   margin: auto;
 }
 
@@ -112,7 +113,16 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: $section-spacing-smaller;
+  right: $section-spacing-small;
+  pointer-events: none;
+
+  @include breakpoint(1800) {
+    right: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(1500) {
+    right: $section-spacing-tiny;
+  }
 
   svg {
     width: 200px;
