@@ -61,28 +61,33 @@
   max-width: 500px;
 
   @include breakpoint(1600) {
-    margin: 0;
+    font-size: $font-size-medium-large;
   }
 
   @include breakpoint(1350) {
     margin: 0 auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin-bottom: $section-spacing-extra-small;
   }
 
   @include breakpoint(800) {
-    font-size: $font-size-medium-large;
+    text-align: center;
   }
 
   @include breakpoint(750) {
     margin: 0 auto $section-spacing-extra-small;
   }
+
+  @include breakpoint(500) {
+    font-size: $font-size-medium;
+  }
 }
 
 .about-me-header-image-wrapper {
   flex: 0 1 auto;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 //*=========================================
@@ -109,15 +114,19 @@
     padding: $section-spacing-small $section-spacing-smaller 0;
   }
 
+  @include breakpoint(1600) {
+    font-size: $font-size-small;
+  }
+
   @include breakpoint(1350) {
     padding: $section-spacing-smaller $section-spacing-extra-small 0;
   }
 
-  @include breakpoint(800) {
-    font-size: $font-size-small;
-  }
-
   @include breakpoint(750) {
     padding: $section-spacing-extra-small $section-spacing-tiny 0;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
   }
 }
