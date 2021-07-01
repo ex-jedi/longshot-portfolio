@@ -166,7 +166,7 @@ a {
   margin: $section-spacing-extra-small auto;
 
   @include breakpoint(750) {
-    margin: $section-spacing-extra-small auto;
+    margin: $paragraph-spacing-large auto;
   }
 }
 
