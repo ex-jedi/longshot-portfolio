@@ -26,7 +26,12 @@
 
 .gallery-index-wrapper {
   @include flex(row);
-  @include styled-scrollbar(0, $font-colour-green, $background-colour-light, $background-colour-light);
+  @include styled-scrollbar(
+    0,
+    $font-colour-green,
+    $background-colour-light,
+    $background-colour-light
+  );
 
   justify-content: flex-start;
   align-items: center;
@@ -42,18 +47,38 @@
   align-items: flex-end;
   flex: 1 0 auto;
   margin-right: $section-spacing-extra-small;
+
   &:first-of-type {
-    margin-left: $section-spacing-medium;
+    margin-left: $section-spacing-small;
+  }
+
+  @include breakpoint(750) {
+    &:first-of-type {
+      margin-left: $paragraph-spacing-large;
+    }
+  }
+}
+
+.gallery-index-image {
+  max-height: 80vh;
+  width: auto;
+
+  @include breakpoint(750) {
+    max-height: 70vh;
   }
 }
 
 .gallery-index-sub-heading {
-  font-size: $font-size-medium-large;
+  font-size: $font-size-large;
   font-weight: 500;
   text-transform: uppercase;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   margin: 0;
+
+  @include breakpoint(1750) {
+    font-size: $font-size-medium-large;
+  }
 }
 
 .gallery-index-link {
@@ -123,7 +148,6 @@
   }
   30% {
     transform: translateX(1rem);
-
   }
   40% {
     transform: translateX(-1rem);
