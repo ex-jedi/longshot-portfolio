@@ -213,6 +213,10 @@ a {
   @include breakpoint(750) {
     padding: $paragraph-spacing-small $paragraph-spacing-medium;
   }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
+  }
 }
 
 #main-nav-closer {
@@ -294,6 +298,10 @@ label {
 
   @include breakpoint(800) {
     font-size: $font-size-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
   }
 }
 
@@ -518,6 +526,10 @@ label {
 
   @include breakpoint(1600) {
     font-size: $font-size-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
   }
 }
 

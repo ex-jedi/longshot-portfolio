@@ -55,6 +55,10 @@
   @include breakpoint(750) {
     padding: $section-spacing-extra-small $section-spacing-tiny;
   }
+
+  @include breakpoint(400) {
+    padding: $section-spacing-extra-small 1rem;
+  }
 }
 
 .section-one-wrapper {
@@ -155,6 +159,10 @@
   @include breakpoint(750) {
     padding: calc(#{$section-spacing-extra-small} / 2) $section-spacing-tiny;
     margin-bottom: calc(#{$section-spacing-extra-small} / 2);
+  }
+
+  @include breakpoint(500) {
+    padding: calc(#{$section-spacing-extra-small} / 2) 0;
   }
 }
 
