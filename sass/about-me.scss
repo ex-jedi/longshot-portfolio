@@ -83,6 +83,16 @@
   font-size: $font-size-medium;
   padding: $section-spacing-small $section-spacing-extra-large 0;
 
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   @include breakpoint(1750) {
     padding: $section-spacing-small $section-spacing-smaller 0;
   }
