@@ -33,6 +33,10 @@
     @include flex(column);
     padding: $section-spacing-smaller $section-spacing-extra-small 0;
   }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny 0;
+  }
 }
 
 .about-me-header-text-wrapper {
@@ -65,6 +69,14 @@
     width: 100%;
     max-width: 500px;
     margin-bottom: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(750) {
+    margin: 0 auto $section-spacing-extra-small;
   }
 }
 
@@ -99,5 +111,13 @@
 
   @include breakpoint(1350) {
     padding: $section-spacing-smaller $section-spacing-extra-small 0;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny 0;
   }
 }
