@@ -19,7 +19,7 @@ function flickityInit() {
     selectedAttraction: 0.006,
     friction: 0.15,
     pageDots: false,
-    prevNextButtons: false,
+    // prevNextButtons: false,
   });
 }
 
