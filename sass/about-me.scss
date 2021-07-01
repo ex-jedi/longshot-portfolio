@@ -88,6 +88,6 @@
   }
 
   @include breakpoint(1350) {
-    padding: $section-spacing-smaller $section-spacing-smaller 0;
+    padding: $section-spacing-smaller $section-spacing-extra-small 0;
   }
 }
