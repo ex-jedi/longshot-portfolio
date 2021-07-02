@@ -61,7 +61,7 @@ function imageShrinkFunction(target) {
       start: 'top 90%',
       end: 'bottom top',
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
 
