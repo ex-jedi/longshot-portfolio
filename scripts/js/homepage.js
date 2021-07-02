@@ -5,6 +5,7 @@
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from 'gsap/SplitText';
 
 // !
 
@@ -25,7 +26,7 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
 gsap.fromTo(
   '.main-header',
   { backgroundSize: '100vh 100vh' },
-  { backgroundSize: '130vh 130vh', duration: 30, repeat: -1, yoyo: true, ease: 'none' }
+  { backgroundSize: '130vh 130vh', duration: 30, repeat: -1, yoyo: true, ease: 'power1.inOut' }
 );
 
 // ********** Image Shrink **********
@@ -45,6 +46,19 @@ gsap.utils.toArray('.shrinking-image').forEach((elem) => {
     }
   );
 });
+
+// ********** Sp[lit Text Fade Up **********
+
+const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
+console.log(splitTextFadeUpTargets);
+
+const splitFadeUpElements = new SplitText(splitTextFadeUpTargets, { type: 'lines' });
+
+gsap.fromTo(
+  splitFadeUpElements.lines,
+  { opacity: 0, translateX: '20px' },
+  { opacity: 1, translateX: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
+);
 // !
 
 // *==============================================================================

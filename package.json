@@ -6,7 +6,7 @@
   "dependencies": {
     "flickity": "^2.2.2",
     "flickity-imagesloaded": "^2.0.0",
-    "gsap": "^3.7.0"
+    "gsap": "npm:@gsap/shockingly@^3.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
