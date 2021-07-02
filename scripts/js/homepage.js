@@ -20,6 +20,31 @@ import { textArealabelHide, navBackgroundSwap, openCloseNav } from './utils';
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
 
+// ********** Homepage header breathe **********
+
+gsap.fromTo(
+  '.main-header',
+  { backgroundSize: '100vh 100vh' },
+  { backgroundSize: '130vh 130vh', duration: 30, repeat: -1, yoyo: true, ease: 'none' }
+);
+
+// ********** Image Shrink **********
+gsap.utils.toArray('.shrinking-image').forEach((elem) => {
+  gsap.fromTo(
+    elem,
+    { scale: 1.4 },
+    {
+      scale: 1,
+      scrollTrigger: {
+        trigger: elem,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5,
+        markers: true,
+      },
+    }
+  );
+});
 // !
 
 // *==============================================================================
