@@ -172,6 +172,7 @@
 
 .bio-image-wrapper {
   width: 30%;
+  animation: brignell-bounce 10s ease-in-out infinite normal forwards;
 
   @include breakpoint(1300) {
     width: 100%;
