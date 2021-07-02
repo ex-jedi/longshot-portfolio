@@ -28,6 +28,18 @@
   font-weight: 500;
   color: $font-colour-green;
   text-align: center;
-  width: 90%;
+  width: 70%;
   max-width: 800px;
+
+  p {
+    margin: 0;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    width: 90%;
+  }
 }
