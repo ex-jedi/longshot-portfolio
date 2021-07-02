@@ -13,7 +13,8 @@ import { SplitText } from 'gsap/SplitText';
 // ** Imports  **
 // *==============================================================================
 
-import { textArealabelHide, navBackgroundSwap, openCloseNav } from './utils';
+import { navBackgroundSwap, openCloseNav } from './utils';
+import { splitTextFunction } from './animations';
 
 // !=========================================
 // ! GSAP  **
@@ -56,34 +57,6 @@ gsap.utils.toArray('.shrinking-image').forEach((elem) => {
 //   ScrollTrigger.refresh();
 // }, 500);
 
-// ********** Split Text Fade Up **********
-
-const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
-
-splitTextFadeUpTargets.forEach((elem) => {
-  const splitFadeUpElements = new SplitText(elem, { type: 'lines' });
-
-  const splitTextLines = splitFadeUpElements.lines;
-
-  gsap.set(splitTextLines, { opacity: 0, x: 20 });
-
-  ScrollTrigger.create({
-    trigger: elem,
-    start: 'top center',
-    end: 'bottom top',
-    id: 'Split Text Animaton',
-    once: true,
-    // markers: true,
-    onEnter: () => {
-      gsap.fromTo(
-        splitTextLines,
-        { opacity: 0, x: 20 },
-        { opacity: 1, x: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
-      );
-    },
-  });
-});
-
 // !
 
 // *==============================================================================
@@ -94,9 +67,7 @@ splitTextFadeUpTargets.forEach((elem) => {
 // ** Imported  **
 // *==============================================================================
 
-// ********** Homepage Parallax **********
-
-textArealabelHide();
+splitTextFunction();
 
 // ********** Nav Background Swap **********
 
