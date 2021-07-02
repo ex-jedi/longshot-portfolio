@@ -72,6 +72,7 @@ splitTextFadeUpTargets.forEach((elem) => {
     start: 'top center',
     end: 'bottom top',
     id: 'Split Text Animaton',
+    once: true,
     // markers: true,
     onEnter: () => {
       gsap.fromTo(
