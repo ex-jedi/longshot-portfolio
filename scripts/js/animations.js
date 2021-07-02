@@ -104,6 +104,40 @@ function homepageHeaderBreathe() {
   );
 }
 
+// ********** Homepage Gallery Fade **********
+
+function homepageGalleryFade() {
+  gsap.set('.homepage-gallery-image', { opacity: 0, scale: 1.2 });
+
+  ScrollTrigger.create({
+    trigger: '.homepage-gallery-section',
+    start: 'top 90%',
+    end: 'bottom 10%',
+    id: 'Image grid',
+    // markers: true,
+    onEnter: () =>
+      gsap.fromTo(
+        '.homepage-gallery-image',
+        { opacity: 0, scale: 1.2 },
+        { opacity: 1, scale: 1, duration: 1, stagger: { each: 0.3, from: 'start' } }
+      ),
+    onEnterBack: () =>
+      gsap.fromTo(
+        '.homepage-gallery-image',
+        { opacity: 0, scale: 1.2 },
+        { opacity: 1, scale: 1, duration: 1, stagger: { each: 0.3, from: 'end' } }
+      ),
+    onLeave: () =>
+      gsap.to('.homepage-gallery-image', { opacity: 0, duration: 0.5, stagger: { each: 0.1, from: 'end' } }),
+    onLeaveBack: () =>
+      gsap.fromTo(
+        '.homepage-gallery-image',
+        { opacity: 1, scale: 1.2 },
+        { opacity: 0, duration: 0.5, stagger: { each: 0.3, from: 'start' } }
+      ),
+  });
+}
+
 // ********** Homepage Parallax Image **********
 
 function homepageParallax() {
@@ -123,4 +157,4 @@ function homepageParallax() {
 // ** Exports  **
 // *=========================================
 
-export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe };
+export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade };

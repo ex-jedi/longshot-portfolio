@@ -14,7 +14,7 @@ import { SplitText } from 'gsap/SplitText';
 // *==============================================================================
 
 import { navBackgroundSwap, openCloseNav } from './utils';
-import { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe } from './animations';
+import { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade } from './animations';
 
 // !=========================================
 // ! GSAP  **
@@ -22,9 +22,13 @@ import { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe } from 
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
 
-// setTimeout(() => {
-//   ScrollTrigger.refresh();
-// }, 500);
+setTimeout(() => {
+  ScrollTrigger.refresh();
+}, 1000);
+
+// !=========================================
+// ! Animations  **
+// !=========================================
 
 // !
 
@@ -49,5 +53,7 @@ fadeandShrinkFunction();
 splitTextFunction();
 
 // ********** Homepage Header Breathe **********
-
 homepageHeaderBreathe();
+
+// ********** Homepage Gallery Fade **********
+homepageGalleryFade();

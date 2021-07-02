@@ -188,6 +188,11 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: $background-colour-light;
+}
+
+.homepage-gallery-image-wrapper {
+  overflow: hidden;
 }
 
 .gallery-two-image-wrapper {
@@ -208,4 +213,5 @@
 
 .homepage-gallery-image {
   width: 100%;
+  opacity: 0;
 }
