@@ -37,28 +37,50 @@ gsap.utils.toArray('.shrinking-image').forEach((elem) => {
     {
       scale: 1,
       scrollTrigger: {
+        id: 'Shrinking Image',
         trigger: elem,
         start: 'top bottom',
         end: 'bottom top',
         scrub: 0.5,
-        markers: true,
+        // markers: true,
       },
     }
   );
 });
 
-// ********** Sp[lit Text Fade Up **********
+// ********** Split Text Fade Up **********
 
 const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
-console.log(splitTextFadeUpTargets);
 
-const splitFadeUpElements = new SplitText(splitTextFadeUpTargets, { type: 'lines' });
+splitTextFadeUpTargets.forEach((elem) => {
+  const splitFadeUpElements = new SplitText(elem, { type: 'lines' });
 
-gsap.fromTo(
-  splitFadeUpElements.lines,
-  { opacity: 0, translateX: '20px' },
-  { opacity: 1, translateX: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
-);
+  const splitTextLines = splitFadeUpElements.lines;
+
+  gsap.set(splitTextLines, { opacity: 0, x: 20 });
+
+  ScrollTrigger.create({
+    trigger: elem,
+    start: 'top center',
+    end: 'bottom top',
+    id: 'Split Text Animaton',
+    markers: true,
+    onEnter: () => {
+      gsap.fromTo(
+        splitTextLines,
+        { opacity: 0, x: 20 },
+        { opacity: 1, x: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
+      );
+    },
+  });
+});
+
+// gsap.fromTo(
+//   splitFadeUpElements.lines,
+//   { opacity: 0, translateX: '20px' },
+//   { opacity: 1, translateX: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
+// );
+
 // !
 
 // *==============================================================================
