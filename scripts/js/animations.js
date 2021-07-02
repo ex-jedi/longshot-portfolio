@@ -49,6 +49,37 @@ function splitTextFunction() {
   });
 }
 
+// *=========================================
+// ** Image Fade And Shrink   **
+// *=========================================
+
+function imageShrinkFunction(target) {
+  const imageShrinkTimeline = gsap.timeline({
+    scrollTrigger: {
+      id: 'Shrinking Image',
+      trigger: target.closest('.shrinking-image-wrapper'),
+      start: 'top 90%',
+      end: 'bottom top',
+      scrub: 0.5,
+      markers: true,
+    },
+  });
+
+  imageShrinkTimeline
+    .fromTo(target, { opacity: 0 }, { opacity: 1, duration: 0.1 })
+    .fromTo(target, { scale: 1.5 }, { scale: 1, duration: 2 });
+}
+
+function fadeandShrinkFunction() {
+  gsap.utils.toArray('.shrinking-image').forEach((elem) => {
+    imageShrinkFunction(elem);
+  });
+}
+
+// *=========================================
+// ** Image Split  **
+// *=========================================
+
 // *==============================================================================
 // ** Page Animations  **
 // *==============================================================================
@@ -56,6 +87,22 @@ function splitTextFunction() {
 // *=========================================
 // ** Homepage  **
 // *=========================================
+
+// ********** Homepage header breathe **********
+
+function homepageHeaderBreathe() {
+  gsap.fromTo(
+    '.main-header',
+    { backgroundSize: '100vw 100vh' },
+    {
+      backgroundSize: '130vw 130vh',
+      duration: 30,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut',
+    }
+  );
+}
 
 // ********** Homepage Parallax Image **********
 
@@ -76,4 +123,4 @@ function homepageParallax() {
 // ** Exports  **
 // *=========================================
 
-export { splitTextFunction };
+export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe };
