@@ -153,6 +153,28 @@ function homepageParallax() {
   });
 }
 
+// *=========================================
+// ** About me Paragraphs  **
+// *=========================================
+
+function aboutMeparagraphFunction() {
+  const fadeparas = gsap.utils.toArray(document.querySelectorAll('.about-me-section p'));
+
+  fadeparas.forEach((paras) => {
+    gsap.set(paras, { opacity: 0, x: 20 });
+
+    ScrollTrigger.create({
+      trigger: paras,
+      start: 'top 70%',
+      end: 'bottom 20%',
+      once: true,
+      id: 'Paragraph Fade',
+      // markers: true,
+      onEnter: () => gsap.to(paras, { opacity: 1, x: 0, duration: 0.5 }),
+    });
+  });
+}
+
 // *==============================================================================
 // ** Utils  **
 // *==============================================================================
@@ -184,4 +206,11 @@ function scrollTriggerRefresh(time = 1000) {
 // ** Exports  **
 // *=========================================
 
-export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade, scrollTriggerRefresh };
+export {
+  splitTextFunction,
+  fadeandShrinkFunction,
+  homepageHeaderBreathe,
+  homepageGalleryFade,
+  scrollTriggerRefresh,
+  aboutMeparagraphFunction,
+};
