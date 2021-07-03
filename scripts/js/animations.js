@@ -114,7 +114,7 @@ function homepageGalleryFade() {
     start: 'top 90%',
     end: 'bottom 10%',
     id: 'Image grid',
-    // markers: true,
+    markers: true,
     onEnter: () =>
       gsap.fromTo(
         '.homepage-gallery-image',
@@ -153,8 +153,33 @@ function homepageParallax() {
   });
 }
 
+// *==============================================================================
+// ** Utils  **
+// *==============================================================================
+
+// * ScrollTrigger Refresh Initial
+function scrollTriggerRefresh() {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
+  window.addEventListener('load', () => {
+    scrollTriggerRefreshTarget.forEach((triggerElem) => {
+      ScrollTrigger.create({
+        trigger: triggerElem,
+        start: 'top bottom',
+        end: 'top bottom',
+        once: true,
+        markers: true,
+        id: 'ScrollTrigger Refresh',
+        onEnter: () => {
+          ScrollTrigger.refresh();
+          console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+        },
+      });
+    });
+  });
+}
+
 // *=========================================
 // ** Exports  **
 // *=========================================
 
-export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade };
+export { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade, scrollTriggerRefresh };

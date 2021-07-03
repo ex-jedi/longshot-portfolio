@@ -9,5 +9,3 @@ navBackgroundSwap();
 openCloseNav();
 
 splitTextFunction();
-
-console.log('About Me');

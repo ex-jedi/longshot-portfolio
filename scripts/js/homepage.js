@@ -14,7 +14,13 @@ import { SplitText } from 'gsap/SplitText';
 // *==============================================================================
 
 import { navBackgroundSwap, openCloseNav } from './utils';
-import { splitTextFunction, fadeandShrinkFunction, homepageHeaderBreathe, homepageGalleryFade } from './animations';
+import {
+  splitTextFunction,
+  fadeandShrinkFunction,
+  homepageHeaderBreathe,
+  homepageGalleryFade,
+  scrollTriggerRefresh,
+} from './animations';
 
 // !=========================================
 // ! GSAP  **
@@ -57,3 +63,6 @@ homepageHeaderBreathe();
 
 // ********** Homepage Gallery Fade **********
 homepageGalleryFade();
+
+// ********** Scroll Trigger Refresh **********
+scrollTriggerRefresh();
