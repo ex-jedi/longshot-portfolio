@@ -467,12 +467,12 @@ label {
     &:after {
       content: '';
       position: absolute;
-      height: 0.7rem;
-      width: 1.6rem;
+      height: 1rem;
+      width: 2.7rem;
       color: $font-colour-green;
       border-left: 4px solid;
       border-bottom: 4px solid;
-      top: 5px;
+      top: 9px;
       left: 0;
       transform: rotate(-25deg) scale(0.75);
       opacity: 0;
