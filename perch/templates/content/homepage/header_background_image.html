@@ -1,37 +1,7 @@
-<style>
-  .main-header {
-    background: url('<perch:content id="headerBackgroundImage" type="image" label="Background image">');
-    background-position: center;
-    background-size: 100vw 100vh;
-  }
-
-  @media only screen and (max-width: 1920px) {
-    .main-header {
-      background: url('<perch:content id="headerBackgroundImage" type="image" label="Background image" width="2000">');
-      background-position: center;
-      background-size: 100vw 100vh;
-      background-repeat: no-repeat;
-      object-fit: cover;
-    }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .main-header {
-      background: url('<perch:content id="headerBackgroundImage" type="image" label="Background image" width="1000">');
-      background-position: center;
-      background-size: 100vw 100vh;
-      background-repeat: no-repeat;
-      object-fit: cover;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .main-header {
-      background: url('<perch:content id="headerBackgroundImage" type="image" label="Background image" width="600">');
-      background-position: center;
-      background-size: 100vw 100vh;
-      background-repeat: no-repeat;
-      object-fit: cover;
-    }
-  }
-</style>
+<img class="homepage-header-background-image" itemprop="image" loading="lazy" src="<perch:content id="homepageHeaderBg" type="image" width="2000" label="Homepage Header Background">" alt="<perch:content id="altOne" type="text" label="Image Description">"
+sizes="100vw"
+srcset="<perch:content type="image" id="homepageHeaderBg" width="2000"> 2000w,
+<perch:content type="image" id="homepageHeaderBg" width="1500"> 1500w,
+<perch:content type="image" id="homepageHeaderBg" width="1000"> 1000w,
+<perch:content type="image" id="homepageHeaderBg" width="800"> 800w,
+<perch:content type="image" id="homepageHeaderBg" width="600"> 600w">
