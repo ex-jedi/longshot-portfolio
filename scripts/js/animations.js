@@ -107,7 +107,6 @@ function homepageHeaderBreathe() {
 // ********** Homepage Gallery Fade **********
 
 function homepageGalleryFade() {
-  gsap.set('.homepage-gallery-image', { opacity: 0, scale: 1.2 });
   const triggerElem = document.querySelector('.homepage-gallery-section');
 
   ScrollTrigger.create({
@@ -170,10 +169,10 @@ function scrollTriggerRefresh(time = 1000) {
           start: 'top bottom',
           once: true,
           id: 'ScrollTrigger Refresh',
-          markers: true,
+          // markers: true,
           onEnter: () => {
             ScrollTrigger.refresh();
-            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+            // console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
           },
         });
       });
