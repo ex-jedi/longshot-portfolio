@@ -2,10 +2,12 @@
 // ** Imports  **
 // *==============================================================================
 import { navBackgroundSwap, openCloseNav } from './utils';
-import { splitTextFunction } from './animations';
+import { splitTextFunction, aboutMeparagraphFunction } from './animations';
 
 navBackgroundSwap();
 
 openCloseNav();
 
 splitTextFunction();
+
+aboutMeparagraphFunction();

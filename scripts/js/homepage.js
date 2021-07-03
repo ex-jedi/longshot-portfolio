@@ -28,10 +28,6 @@ import {
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
 
-setTimeout(() => {
-  ScrollTrigger.refresh();
-}, 1000);
-
 // !=========================================
 // ! Animations  **
 // !=========================================
