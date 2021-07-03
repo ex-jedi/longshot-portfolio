@@ -114,7 +114,7 @@ function homepageGalleryFade() {
     start: 'top 90%',
     end: 'bottom 10%',
     id: 'Image grid',
-    markers: true,
+    // markers: true,
     onEnter: () =>
       gsap.fromTo(
         '.homepage-gallery-image',
