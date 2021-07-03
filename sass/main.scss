@@ -477,6 +477,13 @@ label {
       transform: rotate(-25deg) scale(0.75);
       opacity: 0;
       transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+
+      @include breakpoint(800) {
+        height: .75rem;
+        width: 1.5rem;
+        top: 5px;
+        left: 0;
+      }
     }
 
     &:checked:after {
