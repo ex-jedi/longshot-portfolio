@@ -31,11 +31,11 @@
 			'template' => 'default.html'
 		));
 		?>
-		<?php perch_content("Header Background Image"); ?>
 	</head>
 		<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 			<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
 				<header class="header main-header">
+					<?php perch_content("Header Background Image"); ?>
 					<!-- Skip to main content link  -->
 					<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 					<!-- For SVG logo. Delete if not needed -->

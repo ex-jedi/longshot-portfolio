@@ -92,10 +92,10 @@ function fadeandShrinkFunction() {
 
 function homepageHeaderBreathe() {
   gsap.fromTo(
-    '.main-header',
-    { backgroundSize: '100vw 100vh' },
+    '.homepage-header-background-image',
+    { scale: 1 },
     {
-      backgroundSize: '130vw 130vh',
+      scale: 1.5,
       duration: 30,
       repeat: -1,
       yoyo: true,
