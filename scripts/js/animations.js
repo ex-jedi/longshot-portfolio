@@ -108,9 +108,10 @@ function homepageHeaderBreathe() {
 
 function homepageGalleryFade() {
   gsap.set('.homepage-gallery-image', { opacity: 0, scale: 1.2 });
+  const triggerElem = document.querySelector('.homepage-gallery-section');
 
   ScrollTrigger.create({
-    trigger: '.homepage-gallery-section',
+    trigger: triggerElem,
     start: 'top 90%',
     end: 'bottom 10%',
     id: 'Image grid',
@@ -157,24 +158,26 @@ function homepageParallax() {
 // ** Utils  **
 // *==============================================================================
 
-// * ScrollTrigger Refresh Initial
-function scrollTriggerRefresh() {
+// * ScrollTrigger Refresh
+function scrollTriggerRefresh(time = 1000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
-    scrollTriggerRefreshTarget.forEach((triggerElem) => {
-      ScrollTrigger.create({
-        trigger: triggerElem,
-        start: 'top bottom',
-        end: 'top bottom',
-        once: true,
-        markers: true,
-        id: 'ScrollTrigger Refresh',
-        onEnter: () => {
-          ScrollTrigger.refresh();
-          console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
-        },
+    setTimeout(() => {
+      // console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+      scrollTriggerRefreshTarget.forEach((triggerElem) => {
+        ScrollTrigger.create({
+          trigger: triggerElem,
+          start: 'top bottom',
+          once: true,
+          id: 'ScrollTrigger Refresh',
+          markers: true,
+          onEnter: () => {
+            ScrollTrigger.refresh();
+            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+          },
+        });
       });
-    });
+    }, time);
   });
 }
 
