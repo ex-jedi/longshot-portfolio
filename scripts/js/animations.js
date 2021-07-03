@@ -99,7 +99,7 @@ function homepageHeaderBreathe() {
       duration: 30,
       repeat: -1,
       yoyo: true,
-      ease: 'power1.out',
+      ease: 'power1.inOut',
     }
   );
 }
