@@ -47,6 +47,10 @@
   position: absolute;
   top: 80%;
   animation: brignell-bounce 2s ease-in-out infinite normal forwards;
+
+  @include breakpoint(750) {
+    top: 65%;
+  }
 }
 
 //*=========================================
