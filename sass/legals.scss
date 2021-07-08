@@ -1,0 +1,72 @@
+// *=======================================================================================
+// ** Legals  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//********** Header **********
+
+.legals-header {
+  background-color: $background-colour-light;
+}
+
+.legals-page-heading {
+  font-size: $font-size-large;
+  color: $font-colour-green;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  margin: $heading-spacing-large auto;
+  width: 60%;
+
+  @include breakpoint(1350) {
+    margin: $heading-spacing-medium auto;
+  }
+
+  @include breakpoint(1000) {
+    font-size: $font-size-medium-large;
+    width: 70%;
+  }
+
+  @include breakpoint(750) {
+    margin: $heading-spacing-small auto;
+    font-size: $font-size-medium;
+    width: 100%;
+    padding: 0 $section-spacing-tiny;
+  }
+}
+
+.legals-text-section {
+  background-color: $background-colour-light;
+  color: $font-colour-green;
+  font-size: $font-size-medium;
+  padding: 0 $section-spacing-large $section-spacing-small;
+
+  p {
+    margin: 0 auto $paragraph-spacing-large;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-medium $section-spacing-small;
+  }
+
+  @include breakpoint(1350) {
+    padding: 0 $section-spacing-small $section-spacing-smaller;
+  }
+
+  @include breakpoint(1000) {
+    padding: 0 $section-spacing-extra-small $section-spacing-smaller;
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    padding: 0 $section-spacing-tiny $section-spacing-extra-small;
+    font-size: $font-size-tiny;
+  }
+}
