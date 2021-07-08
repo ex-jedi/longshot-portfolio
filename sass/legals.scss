@@ -28,6 +28,11 @@
   @include breakpoint(1000) {
     font-size: $font-size-medium-large;
   }
+
+  @include breakpoint(750) {
+    margin: $heading-spacing-small auto;
+    font-size: $font-size-medium;
+  }
 }
 
 .legals-text-section {

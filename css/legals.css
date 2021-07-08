@@ -57,6 +57,12 @@
     font-size: 7.5rem;
   }
 }
+@media (max-width: 750px) {
+  .legals-page-heading {
+    margin: 10rem auto;
+    font-size: 5rem;
+  }
+}
 
 .legals-text-section {
   background-color: #f2edeb;
