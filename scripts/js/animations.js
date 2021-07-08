@@ -175,6 +175,50 @@ function aboutMeparagraphFunction() {
   });
 }
 
+// *=========================================
+// ** Gallery Slider  **
+// *=========================================
+// ********** Swipe Text **********
+
+// *=========================================
+// ** Illustrations Fade Text  **
+// *=========================================
+
+// * Wiggle it
+function swipeTextwiggle() {
+  const xPos = 25;
+
+  const wiggleTl = gsap.timeline({
+    delay: 0.5,
+    defaults: { ease: 'power3.out', duration: 0.1 },
+  });
+  wiggleTl
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: 0 });
+  return wiggleTl;
+}
+
+// * Fade it out
+function swipeTextFade() {
+  const fadeTl = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.out' },
+  });
+
+  fadeTl.to('.swipe-text-paragraph', { autoAlpha: 0 });
+
+  return fadeTl;
+}
+
+function swipeTextAnimation() {
+  const swipeMasterTl = gsap.timeline();
+  swipeMasterTl.add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextFade());
+}
+
 // *==============================================================================
 // ** Utils  **
 // *==============================================================================
@@ -213,4 +257,5 @@ export {
   homepageGalleryFade,
   scrollTriggerRefresh,
   aboutMeparagraphFunction,
+  swipeTextAnimation,
 };
