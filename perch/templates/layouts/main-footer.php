@@ -1,7 +1,7 @@
 <footer class="main-footer">
 	<div class="footer-legals">
 		<p class="footer-copyright" >
-			&copy; <?php echo date("Y"); ?> <span itemprop="name">XXXX XXXX</span>
+			&copy; <?php echo date("Y"); ?> <span itemprop="name">Longshot Photography</span>
 		</p>
 		<p class="footer-terms">
 			<a href="/terms.php">Terms of use</a>
