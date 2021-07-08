@@ -60,11 +60,13 @@
 }
 
 .gallery-index-image {
-  max-height: 80vh;
+  height: 80vh;
+  aspect-ratio: 2/3;
+  object-fit: cover;
   width: auto;
 
   @include breakpoint(750) {
-    max-height: 70vh;
+    height: 70vh;
   }
 }
 
@@ -78,6 +80,10 @@
 
   @include breakpoint(1750) {
     font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium-medium;
   }
 }
 
@@ -109,6 +115,9 @@
   margin: auto;
 }
 
+//********** Scroll Animations **********
+
+//* For larger screens
 .scroll-svg-arrow-wrapper {
   position: absolute;
   top: 50%;
@@ -136,6 +145,11 @@
 
   #Arrow {
     animation: fadeSvg 4s linear forwards;
+  }
+
+  @include breakpoint(1200) {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -177,6 +191,35 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+//* For smaller screens
+
+.swipe-text-paragraph {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 1;
+  font-size: $font-size-large;
+  color: $font-colour-light;
+  text-shadow: -1px -1px 0 $font-colour-dark, 1px -1px 0 $font-colour-dark,
+    -1px 1px 0 $font-colour-dark, 1px 1px 0 $font-colour-dark;
+
+  @include breakpoint(1200) {
+    display: block;
+    visibility: visible;
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium-large;
   }
 }
 
