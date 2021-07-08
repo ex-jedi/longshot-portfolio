@@ -129,8 +129,13 @@
     right: $section-spacing-extra-small;
   }
 
-  @include breakpoint(1500) {
+  @include breakpoint(1400) {
     right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(1300) {
+    display: none;
+    visibility: hidden;
   }
 
   svg {
@@ -145,11 +150,6 @@
 
   #Arrow {
     animation: fadeSvg 4s linear forwards;
-  }
-
-  @include breakpoint(1200) {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -213,7 +213,7 @@
   text-shadow: -1px -1px 0 $font-colour-dark, 1px -1px 0 $font-colour-dark,
     -1px 1px 0 $font-colour-dark, 1px 1px 0 $font-colour-dark;
 
-  @include breakpoint(1200) {
+  @include breakpoint(1300) {
     display: block;
     visibility: visible;
   }
