@@ -60,11 +60,13 @@
 }
 
 .gallery-index-image {
-  max-height: 80vh;
+  height: 80vh;
+  aspect-ratio: 2/3;
+  object-fit: cover;
   width: auto;
 
   @include breakpoint(750) {
-    max-height: 70vh;
+    height: 70vh;
   }
 }
 
@@ -78,6 +80,10 @@
 
   @include breakpoint(1750) {
     font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium-medium;
   }
 }
 
