@@ -47,3 +47,31 @@
   margin: 20rem auto;
   width: 50%;
 }
+@media (max-width: 1350px) {
+  .legals-page-heading {
+    margin: 15rem auto;
+  }
+}
+
+.legals-text-section {
+  background-color: #f2edeb;
+  color: #2b3b36;
+  font-size: 5rem;
+  padding: 0 32rem 20rem;
+}
+.legals-text-section p {
+  margin: 0 auto 5rem;
+}
+.legals-text-section p:last-of-type {
+  margin-bottom: 0;
+}
+@media (max-width: 1600px) {
+  .legals-text-section {
+    padding: 0 28rem 20rem;
+  }
+}
+@media (max-width: 1350px) {
+  .legals-text-section {
+    padding: 0 20rem 15rem;
+  }
+}

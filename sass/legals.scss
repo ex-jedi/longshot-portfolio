@@ -20,4 +20,31 @@
   text-align: center;
   margin: $heading-spacing-large auto;
   width: 50%;
+
+  @include breakpoint(1350) {
+    margin: $heading-spacing-medium auto;
+  }
+}
+
+.legals-text-section {
+  background-color: $background-colour-light;
+  color: $font-colour-green;
+  font-size: $font-size-medium;
+  padding: 0 $section-spacing-large $section-spacing-small;
+
+  p {
+    margin: 0 auto $paragraph-spacing-large;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-medium $section-spacing-small;
+  }
+
+  @include breakpoint(1350) {
+    padding: 0 $section-spacing-small $section-spacing-smaller;
+  }
 }
