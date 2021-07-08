@@ -45,7 +45,7 @@
   width: 100%;
   text-align: center;
   margin: 20rem auto;
-  width: 80%;
+  width: 60%;
 }
 @media (max-width: 1350px) {
   .legals-page-heading {
@@ -55,12 +55,15 @@
 @media (max-width: 1000px) {
   .legals-page-heading {
     font-size: 7.5rem;
+    width: 70%;
   }
 }
 @media (max-width: 750px) {
   .legals-page-heading {
     margin: 10rem auto;
     font-size: 5rem;
+    width: 100%;
+    padding: 0 2.5rem;
   }
 }
 
