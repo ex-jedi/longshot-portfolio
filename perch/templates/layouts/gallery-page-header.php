@@ -44,7 +44,6 @@
 				<header class="header main-header">
 					<!-- Skip to main content link  -->
 					<a class="show-on-focus"  href="#main-content">Skip to main content</a>
-					<!-- For SVG logo. Delete if not needed -->
 						<?php perch_pages_navigation(array(
 								'hide-extensions' => true,
 								'levels'    => 1
