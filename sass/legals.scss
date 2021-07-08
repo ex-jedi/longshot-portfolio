@@ -19,7 +19,7 @@
   width: 100%;
   text-align: center;
   margin: $heading-spacing-large auto;
-  width: 80%;
+  width: 60%;
 
   @include breakpoint(1350) {
     margin: $heading-spacing-medium auto;
@@ -27,11 +27,14 @@
 
   @include breakpoint(1000) {
     font-size: $font-size-medium-large;
+    width: 70%;
   }
 
   @include breakpoint(750) {
     margin: $heading-spacing-small auto;
     font-size: $font-size-medium;
+    width: 100%;
+    padding: 0 $section-spacing-tiny;
   }
 }
 
