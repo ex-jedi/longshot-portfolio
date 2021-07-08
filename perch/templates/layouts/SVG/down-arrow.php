@@ -1,0 +1,1 @@
+<svg class="down-arrow-svg" xmlns="http://www.w3.org/2000/svg" width="68.042" height="105.657" viewBox="0 0 68.042 105.657"><defs><style>.a{fill:none;stroke:#f2edeb;stroke-miterlimit:10;stroke-width:8px;}</style></defs><path class="a" d="M407.893,226.8v97.671M376.7,295.607,407.893,326.8l31.193-31.193" transform="translate(-373.872 -226.8)"/></svg>

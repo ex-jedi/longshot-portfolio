@@ -1,0 +1,45 @@
+// *=======================================================================================
+// ** Error Page **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.error-page-header {
+  position: absolute;
+  background-color: transparent;
+  padding-top: $section-spacing-tiny;
+}
+
+.error-page-section {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 95vh;
+  background-image: url('/images/liathach-rainbow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.error-page-content {
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-green;
+  text-align: center;
+  width: 70%;
+  max-width: 800px;
+
+  p {
+    margin: 0;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    width: 90%;
+  }
+}

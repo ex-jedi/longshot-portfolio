@@ -4,7 +4,7 @@ h1 {
 }
 
 .topbar h1 {
-  color: #756c91;
+  color: hsl(161, 16%, 20%);
 }
 
 label,
@@ -13,7 +13,7 @@ label,
 .button-simple,
 .reset-link {
   font-size: 17px !important;
-  color: #756c91 !important;
+  color: hsl(161, 16%, 20%) !important;
   font-weight: bold;
 }
 

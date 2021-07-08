@@ -1,0 +1,11 @@
+<div class="gallery-index-album">
+  <h3 class="gallery-index-sub-heading">
+    <a class="gallery-index-link"  href="/gallery/<perch:gallery id="albumSlug">"><perch:gallery id="albumTitle"></a>
+  </h3>
+        <img class="gallery-index-image" src="<perch:gallery id="indexLarge" type="image"/>" alt="<perch:gallery id="image-alt" />"
+        sizes="(max-width: 800px) 100vw, 30vw"
+    	  srcset="<perch:gallery type="image" id="indexLarge" crop> 800w,
+                <perch:gallery type="image" id="indexMedium" crop> 600w,
+                <perch:gallery type="image" id="indexSmall" crop> 400w">
+</div>
+<div class="spacer-div"></div>

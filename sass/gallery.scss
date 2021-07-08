@@ -1,0 +1,190 @@
+// *=======================================================================================
+// ** Gallery  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+@use 'flickity' as *;
+
+//*=========================================
+//** General Styles **
+//*=========================================
+
+.gallery-album-section {
+  position: relative;
+}
+
+.gallery-index {
+  background-color: $background-colour-light;
+}
+
+.gallery-header {
+  background-color: $background-colour-light;
+  padding: $paragraph-spacing-medium 0 $section-spacing-extra-small;
+}
+
+.gallery-index-wrapper {
+  @include flex(row);
+  @include styled-scrollbar(
+    0,
+    $font-colour-green,
+    $background-colour-light,
+    $background-colour-light
+  );
+
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $background-colour-light;
+  padding-bottom: $section-spacing-extra-small;
+  margin-bottom: $section-spacing-tiny;
+  overflow: scroll;
+}
+
+.gallery-index-album {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex: 1 0 auto;
+  margin-right: $section-spacing-extra-small;
+
+  &:first-of-type {
+    margin-left: $section-spacing-small;
+  }
+
+  @include breakpoint(750) {
+    &:first-of-type {
+      margin-left: $paragraph-spacing-large;
+    }
+  }
+}
+
+.gallery-index-image {
+  max-height: 80vh;
+  width: auto;
+
+  @include breakpoint(750) {
+    max-height: 70vh;
+  }
+}
+
+.gallery-index-sub-heading {
+  font-size: $font-size-large;
+  font-weight: 500;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin: 0;
+
+  @include breakpoint(1750) {
+    font-size: $font-size-medium-large;
+  }
+}
+
+.gallery-index-link {
+  color: $font-colour-green;
+  text-decoration: none;
+}
+
+//*=========================================
+//** Gallery Page **
+//*=========================================
+
+.gallery-album-section {
+  padding: 0 $section-spacing-tiny;
+}
+
+.carousel-cell {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.gallery-album-image {
+  width: 100%;
+  height: 90vh;
+  object-fit: contain;
+  margin: auto;
+}
+
+.scroll-svg-arrow-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: $section-spacing-small;
+  pointer-events: none;
+
+  @include breakpoint(1800) {
+    right: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(1500) {
+    right: $section-spacing-tiny;
+  }
+
+  svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  #Text {
+    transform-origin: center;
+    animation: rotateSvg 4s linear forwards;
+  }
+
+  #Arrow {
+    animation: fadeSvg 4s linear forwards;
+  }
+}
+
+@keyframes rotateSvg {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeSvg {
+  10% {
+    transform: translateX(1rem);
+  }
+  20% {
+    transform: translateX(-1rem);
+  }
+  30% {
+    transform: translateX(1rem);
+  }
+  40% {
+    transform: translateX(-1rem);
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+  60% {
+    transform: translateX(-1rem);
+  }
+  70% {
+    transform: translateX(1rem);
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.empty-footer {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+//TODO: Make nav links closer together

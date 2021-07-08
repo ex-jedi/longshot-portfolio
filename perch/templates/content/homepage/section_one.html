@@ -1,0 +1,35 @@
+<section class="section-one">
+  <div class="intro-wrapper section-one-wrapper scrolltrigger-refresh-target">
+    <div class="section-one-text-wrapper intro-text-wrapper">
+      <p class="section-one-text intro-text split-text-fade-up">
+        <perch:content id="homepageIntroText" type="text" label="Homepage Introduction Text" divider-before="Homepage Intro" required >
+      </p>
+    </div>
+    <div class="section-one-image-wrapper intro-image-wrapper shrinking-image-wrapper">
+      <img class="section-one-image intro-image shrinking-image" itemprop="image" loading="lazy" src="<perch:content id="secOneImg" type="image" width="2000" label="Section One Image">" alt="<perch:content id="alt" type="text" label="Image Description">"
+      sizes="(max-width: 1000px) 100vw, 30vw"
+      srcset="<perch:content type="image" id="secOneImg" width="2000"> 2000w,
+      <perch:content type="image" id="secOneImg" width="1600"> 1600w,
+      <perch:content type="image" id="secOneImg" width="1200"> 1200w,
+      <perch:content type="image" id="secOneImg" width="800"> 800w,
+      <perch:content type="image" id="secOneImg" width="600"> 600w" >
+    </div>
+  </div>
+  <div class="bio-wrapper section-one-wrapper scrolltrigger-refresh-target">
+    <div class="section-one-text-wrapper bio-text-wrapper">
+      <p class="section-one-text bio-text split-text-fade-up">
+        <perch:content id="homepageBioText" type="text" label="Homepage Bio Text" divider-before="Homepage Bio" required >
+      </p>
+    </div>
+    <div class="section-one-image-wrapper bio-image-wrapper">
+      <img class="section-one-image bio-image" itemprop="image" loading="lazy" src="<perch:content id="secOneBioImg" type="image" width="2000" label="Section One Bio Image">" alt="<perch:content id="altBio" type="text" label="Image Description">"
+      sizes="(max-width: 1000px) 100vw, 30vw"
+      srcset="<perch:content type="image" id="secOneBioImg" width="2000"> 2000w,
+      <perch:content type="image" id="secOneBioImg" width="1600"> 1600w,
+      <perch:content type="image" id="secOneBioImg" width="1200"> 1200w,
+      <perch:content type="image" id="secOneBioImg" width="800"> 800w,
+      <perch:content type="image" id="secOneBioImg" width="600"> 600w" >
+    </div>
+  </div>
+</section>
+<!-- TODO: Check image source set sizes -->

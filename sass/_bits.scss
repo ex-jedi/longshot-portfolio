@@ -21,8 +21,7 @@ $grid-gap: 0 1rem;
 
 //* Font Stacks
 @mixin main-font-stack {
-  font-family: 'futura-pt', sans-serif;
-  font-weight: 700;
+  font-family: 'canada-type-gibson', sans-serif;
   font-style: normal;
 }
 
@@ -34,44 +33,39 @@ $header-spacing-large: 10rem;
 
 //* Headings
 
-//Sizing
-$h1-size: 8rem;
-$h1-size-medium: 6rem;
-$h1-size-small: 5rem;
-$h2-size: 8rem;
-$h3-size: 1rem;
+// FontSizing
+$heading-size-large: 10rem;
+$heading-size-medium: 7.5rem;
 
 //Spacing
-$h1-spacing-large: 5rem;
-$h1-spacing: 20rem;
-$h2-spacing: 20rem;
-$h3-spacing: 1rem;
+$heading-spacing-large: 20rem;
+$heading-spacing-medium: 15rem;
+$heading-spacing-small: 10rem;
 
 //* Sections
-$section-spacing-extra-large: 40rem;
-$section-spacing-very-large: 35rem;
-$section-spacing-large: 30rem;
-$section-spacing-medium: 25rem;
+$section-spacing-extra-large: 46rem;
+$section-spacing-large: 32rem;
+$section-spacing-medium: 28rem;
 $section-spacing-small: 20rem;
 $section-spacing-smaller: 15rem;
 $section-spacing-extra-small: 10rem;
+$section-spacing-tiny: 2.5rem;
 
 //* Paragraphs
 
 //Font sizing
-$font-size-large: 7rem;
-$font-size-larger: 6rem;
+$font-size-large: 10rem;
+$font-size-medium-large: 7.5rem;
 $font-size-medium: 5rem;
-$font-size-main: 4rem;
-$font-size-small: 3rem;
-$font-size-extra-small: 2rem;
-$font-size-tiny: 1rem;
+$font-size-small: 3.8rem;
+$font-size-tiny: 2.5rem;
+$font-size-really-tiny: 1.6rem;
 
 //Spacing
-$paragraph-spacing-large: 10rem;
-$paragraph-spacing-medium: 5rem;
-$paragraph-spacing-small: 2.5rem;
-$paragraph-spacing-smaller: 2rem;
+$paragraph-spacing-extra-large: 10rem;
+$paragraph-spacing-large: 5rem;
+$paragraph-spacing-medium: 2.5rem;
+$paragraph-spacing-small: 2rem;
 
 //* Forms
 
@@ -79,7 +73,11 @@ $paragraph-spacing-smaller: 2rem;
 $input-font-size: $font-size-small;
 
 //Spacing
-$input-spacing: 1rem;
+$input-spacing-extra-large: 20rem;
+$input-spacing-larger: 15rem;
+$input-spacing-large: 10rem;
+$input-spacing-medium: 7.5rem;
+$input-spacing-small: 5rem;
 
 //*=========================================
 //** Colours  **
@@ -88,16 +86,16 @@ $input-spacing: 1rem;
 //TODO: Customise brand colours
 
 //Main brand Colours
-$background-colour-main: #f4f1f0;
+$background-colour-light: #f2edeb;
 $background-colour-two: #6c9184;
-$background-colour-three: #756c91;
+$background-colour-three: #2b3b36;
+$background-colour-four: #875548;
 
 //Main Font Colours
-$font-colour-main: #756c91;
-$font-colour-two: #6c9184;
-$font-colour-three: #91736c;
-$font-colour-four: #918f73;
-$font-colour-light: #f4f1f0;
+$font-colour-light: #f2edeb;
+$font-colour-dark: #252525;
+$font-colour-green: #2b3b36;
+$font-colour-brown: #875548;
 
 $link-colour: #3c3cf6;
 $link-visited: #8608fb;
@@ -159,6 +157,22 @@ $transition-two-cubic: $timing-duration-slow $cubic-one 0s;
 }
 
 //********** Keyframes **********
+
+//********** Bounce **********
+@keyframes brignell-bounce {
+  25% {
+    transform: translateY(-2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 //*=========================================
 //** Media Queries   **

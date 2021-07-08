@@ -1,0 +1,133 @@
+// *=======================================================================================
+// ** About Me  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Header **
+//*=========================================
+
+.about-me-header {
+  background-color: $background-colour-light;
+  padding-top: $paragraph-spacing-medium;
+}
+
+.about-me-header-content-wrapper {
+  @include flex(row);
+  padding: $section-spacing-small $section-spacing-small 0;
+  justify-content: space-around;
+  align-items: center;
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-smaller 0;
+  }
+
+  @include breakpoint(1600) {
+    padding: $section-spacing-small $section-spacing-tiny 0;
+  }
+
+  @include breakpoint(1350) {
+    @include flex(column);
+    padding: $section-spacing-smaller $section-spacing-extra-small 0;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny 0;
+  }
+}
+
+.about-me-header-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+  background-image: url('/images/gouache-wash-600.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+
+  @include breakpoint(1350) {
+    width: 100%;
+  }
+}
+
+.about-me-header-text {
+  font-size: $font-size-large;
+  color: $font-colour-brown;
+  font-weight: 500;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+
+  @include breakpoint(1600) {
+    font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(1350) {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(800) {
+    text-align: center;
+  }
+
+  @include breakpoint(750) {
+    margin: 0 auto $section-spacing-extra-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-medium;
+  }
+}
+
+.about-me-header-image-wrapper {
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: 500px;
+  animation: brignell-bounce 10s ease-in-out infinite normal forwards;
+}
+
+//*=========================================
+//** Main Page Content **
+//*=========================================
+
+.about-me-section {
+  background-color: $background-colour-light;
+  color: $font-colour-brown;
+  font-size: $font-size-medium;
+  padding: $section-spacing-small $section-spacing-extra-large 0;
+
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-smaller 0;
+  }
+
+  @include breakpoint(1600) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(1350) {
+    padding: $section-spacing-smaller $section-spacing-extra-small 0;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny 0;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
+  }
+}

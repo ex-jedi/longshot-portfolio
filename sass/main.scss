@@ -12,14 +12,16 @@
 // *=========================================
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  @include styled-scrollbar(
+    1rem,
+    $font-colour-green,
+    $background-colour-light,
+    $background-colour-light
+  );
 }
 
 // * Box sizing rules
@@ -30,11 +32,13 @@ html {
 }
 
 body {
+  //TODO: Choose max size
   margin: 0 auto;
   position: relative;
   min-width: 320px;
   max-width: 1920px;
   overflow-x: hidden;
+  @include main-font-stack;
 }
 
 // *=========================================
@@ -42,6 +46,31 @@ body {
 // *=========================================
 
 //********** Headings**********
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.section-heading {
+  font-size: $heading-size-large;
+  margin: 0 auto $heading-spacing-large;
+
+  @include breakpoint(1600) {
+    font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(1300) {
+    margin: 0 auto $heading-spacing-medium;
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium;
+    margin: 0 auto $heading-spacing-small;
+  }
+}
 
 //********** Containers **********
 
@@ -58,6 +87,10 @@ main {
 }
 
 //********** Paragraphs **********
+
+p {
+  font-kerning: none;
+}
 
 // *=========================================
 // ** Inline **
@@ -80,12 +113,139 @@ a {
   color: $link-colour;
 }
 
+//*=========================================
+//** Header **
+//*=========================================
+.main-header {
+  @include flex(column);
+  position: relative;
+  width: 100vw;
+  z-index: 4;
+}
+
+//********** Main Logo **********
+.main-logo {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 // *=========================================
 // ** Main Nav  **
 // *=========================================
 
-.main-nav-trigger-wrapper {
+.main-nav {
+  @include flex(column);
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('/images/from-orkney-2000.png');
+  background-color: $background-colour-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 4;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.main-nav-link {
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-green;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: $section-spacing-tiny;
+  // margin: $section-spacing-tiny auto;
+
+  @include breakpoint(750) {
+    font-size: $font-size-small;
+  }
+}
+
+#main-nav-current {
   display: none;
+  visibility: hidden;
+  margin: 0;
+}
+
+.main-nav-trigger-wrapper {
+  //FIXME: Odd bit of spacing at the bottom
+  position: fixed;
+  width: fit-content;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include breakpoint(750) {
+    @include flex(col);
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    top: unset;
+    transform: translateY(0);
+    width: 100%;
+    background-color: $background-colour-three;
+  }
+}
+
+.main-nav-trigger {
+  background-color: $background-colour-three;
+  padding: $paragraph-spacing-medium;
+  margin: 0;
+  border: none;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-light;
+  cursor: pointer;
+
+  @include breakpoint(1600) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $paragraph-spacing-small $paragraph-spacing-medium;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
+  }
+}
+
+#main-nav-closer {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  padding: $section-spacing-tiny;
+  margin: $section-spacing-tiny auto;
+  transition: all 0.6s ease;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.sideways-text {
+  display: block;
+  align-items: stretch;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  margin: 0;
+  padding: 0;
+  //* Writing mode doesn't work on buttons it seems. Span added for sideways text
+
+  @include breakpoint(750) {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+  }
 }
 
 //********** Responsive Styles **********
@@ -98,12 +258,285 @@ a {
 // ** Forms  **
 // *=========================================
 
-//* Inherit fonts for inputs and buttons
+//*=========================================
+//** Contact Form **
+//*=========================================
+
 input,
 button,
 textarea,
 select {
   font: inherit;
+}
+.contact-section {
+  padding: $section-spacing-small $section-spacing-medium;
+  background-color: $background-colour-light;
+  color: $font-colour-green;
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-smaller;
+  }
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-smaller $section-spacing-extra-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny;
+  }
+}
+
+.contact-form-heading {
+  font-weight: 500;
+}
+
+label {
+  font-size: $font-size-medium;
+  margin-right: $font-size-small;
+  font-weight: 500;
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
+  }
+}
+
+.input-and-label-div {
+  @include flex(row);
+  position: relative;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: $input-spacing-large;
+
+  @include breakpoint(1300) {
+    @include flex(column);
+    align-items: flex-start;
+    margin-bottom: $input-spacing-medium;
+
+    @include breakpoint(750) {
+      margin-bottom: $input-spacing-small;
+    }
+  }
+
+  input {
+    flex: 1 1 auto;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border-bottom: 4px solid $font-colour-green;
+    font-size: $font-size-medium;
+    color: inherit;
+    font-weight: 500;
+
+    @include breakpoint(1300) {
+      width: 100%;
+    }
+  }
+}
+
+.text-area-label {
+  position: absolute;
+  top: -1rem;
+  background-color: $background-colour-light;
+  padding-right: $font-size-small;
+  transition: opacity 0.2s ease-out;
+
+  @include breakpoint(1300) {
+    position: relative;
+  }
+}
+
+.text-area-input {
+  text-indent: 24rem;
+  border: 0;
+  padding: 0;
+  resize: none;
+  line-height: 4.4rem;
+  background-attachment: local;
+
+  @include breakpoint(1300) {
+    text-indent: 0;
+  }
+
+  // Custom Scrollbar
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  color: $font-colour-green;
+  @include styled-scrollbar(
+    1rem,
+    $background-colour-three,
+    $background-colour-light,
+    $background-colour-light
+  );
+
+  // Text area underlining
+  background-image: linear-gradient(
+      to right,
+      $background-colour-light 0,
+      transparent 0
+    ),
+    linear-gradient(to left, $background-colour-light 0, transparent 0),
+    repeating-linear-gradient(
+      $background-colour-light,
+      // Leave
+      $background-colour-light 4rem,
+      $font-colour-green 1.8rem,
+      // Seems to control line thickness
+      $font-colour-green 4.4rem,
+      $background-colour-light 1.85rem
+    );
+
+  &.active {
+    // Text area underlining
+    background-image: linear-gradient(
+        to right,
+        $background-colour-light 0,
+        transparent 0
+      ),
+      linear-gradient(to left, $background-colour-light 0, transparent 0),
+      repeating-linear-gradient(
+        $background-colour-light,
+        // Leave
+        $background-colour-light 4rem,
+        $font-colour-light 1.8rem,
+        // Seems to control line thickness
+        $font-colour-light 4.4rem,
+        $background-colour-light 1.85rem
+      );
+  }
+}
+
+.fade-out {
+  opacity: 0;
+
+  @include breakpoint(1300) {
+    opacity: 1;
+  }
+}
+
+//********** Checkbox **********
+
+.checkbox-div {
+  @include flex(row);
+  margin-bottom: $input-spacing-large;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &:last-of-type {
+    margin-bottom: $input-spacing-extra-large;
+
+    @include breakpoint(1300) {
+      margin-bottom: $input-spacing-larger;
+    }
+
+    @include breakpoint(750) {
+      margin-bottom: $input-spacing-large;
+    }
+  }
+
+  input {
+    position: relative;
+    width: fit-content;
+    font-size: 0;
+    top: 0.5rem;
+    margin-right: 2rem;
+
+    @include breakpoint(400) {
+      top: 0.3rem;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: $font-size-small;
+      height: $font-size-small;
+      margin-top: -3px;
+      margin-left: -5px;
+      border: 4px solid $background-colour-three;
+      // outline: none;
+      border-radius: 0.25em;
+      background: $background-colour-light;
+
+      @include breakpoint(800) {
+        width: $font-size-tiny;
+        height: $font-size-tiny;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 1rem;
+      width: 2.7rem;
+      color: $font-colour-green;
+      border-left: 4px solid;
+      border-bottom: 4px solid;
+      top: 9px;
+      left: 0;
+      transform: rotate(-25deg) scale(0.75);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+
+      @include breakpoint(800) {
+        height: .75rem;
+        width: 1.5rem;
+        top: 5px;
+        left: 0;
+      }
+    }
+
+    &:checked:after {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+
+  label {
+    text-transform: none;
+    display: inline-block;
+    font-size: $font-size-tiny;
+    font-weight: 400;
+    width: 90%;
+
+    @include breakpoint(800) {
+      font-size: $font-size-really-tiny;
+    }
+  }
+}
+
+.form-consent-link {
+  color: inherit;
+}
+
+.submit {
+  font-size: $font-size-medium;
+  background-color: $background-colour-light;
+  text-transform: uppercase;
+  border: 5px solid $font-colour-green;
+  padding: 1rem;
+  margin: 0 auto;
+  display: block;
+  appearance: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $font-colour-light;
+    background-color: $background-colour-three;
+  }
+
+  @include breakpoint(1600) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
+  }
 }
 
 //********** Honeypot **********
@@ -123,6 +556,43 @@ select {
 // *=========================================
 // ** Footer  **
 // *=========================================
+
+.main-footer {
+  background-color: $background-colour-four;
+  margin: 0;
+  font-size: $font-size-really-tiny;
+  color: $background-colour-light;
+  padding: $paragraph-spacing-medium;
+  text-align: center;
+
+  @include breakpoint(750) {
+    padding-bottom: $section-spacing-extra-small;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  p {
+    margin: 0 auto $paragraph-spacing-medium;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.footer-legals {
+  margin: $section-spacing-small auto;
+
+  @include breakpoint(1300) {
+    margin: $section-spacing-smaller auto;
+  }
+
+  @include breakpoint(750) {
+    margin: $section-spacing-extra-small auto;
+  }
+}
 
 //*=========================================
 //** Utility & Accessibility  **
@@ -180,74 +650,43 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 }
 
-//*=========================================
-//** Cookie Warning **
-//*=========================================
+//********** Visually Hidden  **********
 
-.cookie-warning-wrapper {
-  @include flex(row);
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
+.visually-hidden {
+  position: absolute;
+  top: 0;
   left: 0;
-  width: 100%;
-  padding: 1rem;
-  font-size: 30px;
-  //TODO: Add variables for cookie warning colour
-  background-color: #fff;
-  opacity: 0;
-  z-index: 10;
-  transition: all 0.5s 0.25s;
-
-  @include breakpoint(1100) {
-    font-size: 20px;
-  }
-
-  @include breakpoint(850) {
-    @include flex(column);
-  }
-}
-
-.cookie-warning-paragraph {
-  //TODO: Add variables for cookie warning spacing
-  margin: 0 $section-spacing-small 0 0;
-  color: #000;
-
-  @include breakpoint(1300) {
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 $paragraph-spacing-small 0 0;
-  }
-
-  @include breakpoint(850) {
-    text-align: center;
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 0 $paragraph-spacing-small;
-  }
-}
-
-.cookie-warning-link {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.cookie-warning-button {
-  //TODO: Add variables for cookie warning spacing & colour
-
-  background-color: transparent;
-  border: 2px solid #000;
-  color: #000;
-  font-size: inherit;
-  padding: 5px 20px;
-  width: fit-content;
-  flex: 0 0 auto;
-  text-align: center;
-}
-
-.cookie-warning-wrapper.show-cookie-warning {
-  opacity: 1;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 //*=========================================
-//** Browser Specific Styles  **
+//** Animations **
 //*=========================================
+
+.shrinking-image-wrapper {
+  overflow: hidden;
+}
+
+//*=========================================
+//** Browser Specific Styles **
+//*=========================================
+
+//*=========================================
+//** IOS **
+//*=========================================
+
+@media not all and (min-resolution: 0.001dpcm) {
+  .sideways-text {
+    width: 50px;
+
+    @include breakpoint(750) {
+      width: auto;
+    }
+  }
+} // IOS Styles End

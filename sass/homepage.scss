@@ -1,0 +1,235 @@
+// *=======================================================================================
+// ** Homepage  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Header **
+//*=========================================
+.main-header {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  overflow: hidden;
+}
+
+//********** Main Logo **********
+.main-logo {
+  position: relative;
+  width: 60%;
+  max-width: 1000px;
+
+  @include breakpoint(750) {
+    width: 90%;
+  }
+}
+
+//********** Images **********
+.homepage-header-background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.down-arrow-svg {
+  position: absolute;
+  top: 80%;
+  animation: brignell-bounce 2s ease-in-out infinite normal forwards;
+
+  @include breakpoint(750) {
+    top: 65%;
+  }
+}
+
+//*=========================================
+//** Section One **
+//*=========================================
+
+.section-one {
+  padding: $section-spacing-small;
+  background-color: $background-colour-light;
+  font-weight: 500;
+
+  @include breakpoint(1750) {
+    padding: $section-spacing-small $section-spacing-smaller;
+  }
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-smaller $section-spacing-extra-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-extra-small $section-spacing-tiny;
+  }
+
+  @include breakpoint(400) {
+    padding: $section-spacing-extra-small 1rem;
+  }
+}
+
+.section-one-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(1300) {
+    @include flex(column);
+  }
+}
+
+.section-one-image-wrapper,
+.section-one-text-wrapper {
+  flex: 0 1 auto;
+}
+
+.section-one-text {
+  font-size: $font-size-large;
+  margin: 0;
+
+  @include breakpoint(1600) {
+    font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-medium;
+  }
+}
+
+.section-one-image {
+  width: 100%;
+}
+
+//********** Intro **********
+
+.intro-wrapper {
+  margin-bottom: $section-spacing-small;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(750) {
+    margin-bottom: calc(#{$section-spacing-extra-small} / 2);
+  }
+}
+
+.intro-text-wrapper {
+  width: 40%;
+  margin-right: $section-spacing-extra-small;
+
+  @include breakpoint(1300) {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto $section-spacing-smaller;
+  }
+
+  @include breakpoint(750) {
+    margin: 0 auto $section-spacing-extra-small;
+  }
+}
+
+.intro-text {
+  color: $font-colour-green;
+  margin: 0 auto;
+}
+
+.intro-image-wrapper {
+  width: 50%;
+
+  @include breakpoint(1300) {
+    width: 100%;
+  }
+}
+
+//********** Bio **********
+
+.bio-text-wrapper {
+  @include flex(column);
+  justify-content: center;
+  color: $font-colour-brown;
+  background-image: url(/images/gouache-wash-1500.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  padding: $paragraph-spacing-large;
+
+  @include breakpoint(1300) {
+    @include flex(column);
+    width: 100%;
+    text-align: center;
+    padding: $paragraph-spacing-large $paragraph-spacing-large
+      $section-spacing-smaller;
+  }
+
+  @include breakpoint(750) {
+    padding: calc(#{$section-spacing-extra-small} / 2) $section-spacing-tiny;
+    margin-bottom: calc(#{$section-spacing-extra-small} / 2);
+  }
+
+  @include breakpoint(500) {
+    padding: calc(#{$section-spacing-extra-small} / 2) 0;
+  }
+}
+
+.bio-text {
+  color: $font-colour-brown;
+}
+
+.bio-image-wrapper {
+  width: 30%;
+  animation: brignell-bounce 10s ease-in-out infinite normal forwards;
+
+  @include breakpoint(1300) {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+//*=========================================
+//** Gallery **
+//*=========================================
+
+.homepage-gallery-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-colour-light;
+}
+
+.homepage-gallery-image-wrapper {
+  overflow: hidden;
+}
+
+.gallery-two-image-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+}
+
+.half-width-gallery-image-wrapper {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+  width: 375px;
+}
+
+.full-width-gallery-image-wrapper {
+  width: 100%;
+}
+
+.homepage-gallery-image {
+  width: 100%;
+  opacity: 0;
+}

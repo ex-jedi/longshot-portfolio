@@ -1,11 +1,38 @@
+// !==============================================================================
+// FIXME: Building animations
+// !==============================================================================
+
+import { gsap } from 'gsap';
+import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from 'gsap/SplitText';
+
+// !
+
 // *==============================================================================
 // ** Imports  **
 // *==============================================================================
 
-import * as Flickity from 'flickity';
-import 'flickity-imagesloaded';
-import { homepageParallax } from './animations';
-import { displayInstagramFeed } from './utils';
+import { navBackgroundSwap, openCloseNav } from './utils';
+import {
+  splitTextFunction,
+  fadeandShrinkFunction,
+  homepageHeaderBreathe,
+  homepageGalleryFade,
+  scrollTriggerRefresh,
+} from './animations';
+
+// !=========================================
+// ! GSAP  **
+// !=========================================
+
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
+
+// !=========================================
+// ! Animations  **
+// !=========================================
+
+// !
 
 // *==============================================================================
 // ** Page JS  **
@@ -15,21 +42,23 @@ import { displayInstagramFeed } from './utils';
 // ** Imported  **
 // *==============================================================================
 
-// ********** Homepage Parallax **********
+// ********** Nav Background Swap **********
+navBackgroundSwap();
 
-homepageParallax();
+// ********** Nav **********
+openCloseNav();
 
-// ********** Instagram Feed **********
+// ********** Fade and shrink function **********
+fadeandShrinkFunction();
 
-displayInstagramFeed();
+// ********** Split text **********
+splitTextFunction();
 
-// ********** Flickity **********
-const carousel = document.querySelector('.main-carousel');
-const flkty = new Flickity(carousel, {
-  imagesLoaded: true,
-  autoPlay: 10000,
-  prevNextButtons: false,
-  wrapAround: true,
-  selectedAttraction: 0.006,
-  friction: 0.15,
-});
+// ********** Homepage Header Breathe **********
+homepageHeaderBreathe();
+
+// ********** Homepage Gallery Fade **********
+homepageGalleryFade();
+
+// ********** Scroll Trigger Refresh **********
+scrollTriggerRefresh();

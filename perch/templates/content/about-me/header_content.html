@@ -1,0 +1,15 @@
+<div class="about-me-header-content-wrapper">
+  <div class="about-me-header-text-wrapper">
+    <p class="about-me-header-text split-text-fade-up">
+      <perch:content id="aboutMeHeaderText" type="text" label="Header Text" required>
+    </p>
+  </div>
+  <div class="about-me-header-image-wrapper">
+    <img class="about-me-header-image" itemprop="image" loading="lazy" src="<perch:content id="aboutMeHeaderImage" type="image" width="1200" label="About Me Header Image">" alt="<perch:content id="altOne" type="text" label="Image Description">"
+    sizes="(max-width: 1200px) 100vw, 50vw"
+    srcset="<perch:content type="image" id="aboutMeHeaderImage" width="1200"> 1200w,
+    <perch:content type="image" id="aboutMeHeaderImage" width="1000"> 1000w,
+    <perch:content type="image" id="aboutMeHeaderImage" width="800"> 800w,
+    <perch:content type="image" id="aboutMeHeaderImage" width="600"> 600w">
+  </div>
+</div>
