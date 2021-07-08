@@ -1,0 +1,23 @@
+// *=======================================================================================
+// ** Legals  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//********** Header **********
+
+.legals-header {
+  background-color: $background-colour-light;
+}
+
+.legals-page-heading {
+  font-size: $font-size-large;
+  color: $font-colour-green;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  margin: $heading-spacing-large auto;
+  width: 50%;
+}

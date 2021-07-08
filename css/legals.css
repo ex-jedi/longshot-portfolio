@@ -1,0 +1,49 @@
+@-webkit-keyframes brignell-bounce {
+  25% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes brignell-bounce {
+  25% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.legals-header {
+  background-color: #f2edeb;
+}
+
+.legals-page-heading {
+  font-size: 10rem;
+  color: #2b3b36;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  margin: 20rem auto;
+  width: 50%;
+}
