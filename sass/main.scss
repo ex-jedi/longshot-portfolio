@@ -227,6 +227,12 @@ a {
   margin: $section-spacing-tiny auto;
   transition: all 0.6s ease;
 
+  svg {
+    .cls-1 {
+      stroke: $background-colour-three;
+    }
+  }
+
   &:hover {
     transform: rotate(180deg);
   }
