@@ -45,11 +45,16 @@
   width: 100%;
   text-align: center;
   margin: 20rem auto;
-  width: 50%;
+  width: 80%;
 }
 @media (max-width: 1350px) {
   .legals-page-heading {
     margin: 15rem auto;
+  }
+}
+@media (max-width: 1000px) {
+  .legals-page-heading {
+    font-size: 7.5rem;
   }
 }
 
@@ -73,5 +78,17 @@
 @media (max-width: 1350px) {
   .legals-text-section {
     padding: 0 20rem 15rem;
+  }
+}
+@media (max-width: 1000px) {
+  .legals-text-section {
+    padding: 0 10rem 15rem;
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 750px) {
+  .legals-text-section {
+    padding: 0 2.5rem 10rem;
+    font-size: 2.5rem;
   }
 }

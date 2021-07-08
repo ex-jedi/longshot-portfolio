@@ -19,10 +19,14 @@
   width: 100%;
   text-align: center;
   margin: $heading-spacing-large auto;
-  width: 50%;
+  width: 80%;
 
   @include breakpoint(1350) {
     margin: $heading-spacing-medium auto;
+  }
+
+  @include breakpoint(1000) {
+    font-size: $font-size-medium-large;
   }
 }
 
@@ -46,5 +50,15 @@
 
   @include breakpoint(1350) {
     padding: 0 $section-spacing-small $section-spacing-smaller;
+  }
+
+  @include breakpoint(1000) {
+    padding: 0 $section-spacing-extra-small $section-spacing-smaller;
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(750) {
+    padding: 0 $section-spacing-tiny $section-spacing-extra-small;
+    font-size: $font-size-tiny;
   }
 }
