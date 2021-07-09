@@ -185,7 +185,7 @@ function galleryAlbumSlideUp() {
   gsap.fromTo(
     '.gallery-index-album',
     { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, stagger: 0.25, ease: 'back.out(2)' }
+    { y: 0, opacity: 1, delay: 0.3, duration: 1, stagger: 0.25, ease: 'back.out(2)' }
   );
 }
 
