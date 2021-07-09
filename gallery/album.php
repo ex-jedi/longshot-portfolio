@@ -12,6 +12,3 @@
 </main>
 <?php perch_layout('empty-footer'); ?>
 <?php perch_layout('gallery-album-end'); ?>
-<!-- TODO: Remove debug -->
-<?php PerchUtil::output_debug(); ?>
-<!-- TODO: Validate HTML -->
