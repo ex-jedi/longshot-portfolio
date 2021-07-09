@@ -178,7 +178,16 @@ function aboutMeparagraphFunction() {
 // *=========================================
 // ** Gallery Slider  **
 // *=========================================
-// ********** Swipe Text **********
+
+// ********** Index Album Slide Up **********
+
+function galleryAlbumSlideUp() {
+  gsap.fromTo(
+    '.gallery-index-album',
+    { y: 100, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1, stagger: 0.25, ease: 'back.out(2)' }
+  );
+}
 
 // *=========================================
 // ** Illustrations Fade Text  **
@@ -258,4 +267,5 @@ export {
   scrollTriggerRefresh,
   aboutMeparagraphFunction,
   swipeTextAnimation,
+  galleryAlbumSlideUp,
 };

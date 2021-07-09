@@ -2,6 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 import { navBackgroundSwap, openCloseNav } from './utils';
+import { galleryAlbumSlideUp } from './animations';
 
 // *=========================================
 // ** Flickity  **
@@ -10,3 +11,5 @@ import { navBackgroundSwap, openCloseNav } from './utils';
 navBackgroundSwap();
 
 openCloseNav();
+
+galleryAlbumSlideUp();
