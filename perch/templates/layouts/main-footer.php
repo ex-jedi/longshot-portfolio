@@ -11,7 +11,7 @@
 		</p>
 	</div>
 	<p class="footer-credit">
-		Web design & development, brand design & illustration by <a href="" class="promo-link">phoenix & phoenix</a>
+		Web design & development, brand design & illustration by <a href="https://phoenixandphoenix.co/" class="promo-link">phoenix & phoenix</a>
 	</p>
 </footer>
 </div> <!-- wrapper div -->
