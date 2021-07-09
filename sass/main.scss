@@ -346,6 +346,14 @@ label {
     @include breakpoint(1300) {
       width: 100%;
     }
+
+    @include breakpoint(800) {
+      font-size: $font-size-small;
+    }
+
+    @include breakpoint(500) {
+      font-size: $font-size-tiny;
+    }
   }
 }
 
@@ -371,6 +379,14 @@ label {
 
   @include breakpoint(1300) {
     text-indent: 0;
+  }
+
+  @include breakpoint(800) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(500) {
+    font-size: $font-size-tiny;
   }
 
   // Custom Scrollbar
@@ -428,6 +444,27 @@ label {
 
   @include breakpoint(1300) {
     opacity: 1;
+  }
+}
+
+//* Success
+
+.success {
+  font-size: $font-size-large;
+  font-weight: 500;
+  text-align: center;
+  color: inherit;
+
+  p {
+    margin: 0;
+  }
+
+  @include breakpoint(1600) {
+    font-size: $font-size-medium-large;
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium;
   }
 }
 
@@ -576,6 +613,7 @@ label {
   color: $background-colour-light;
   padding: $paragraph-spacing-medium;
   text-align: center;
+  overflow-x: hidden;
 
   position: sticky;
   bottom: 0;
