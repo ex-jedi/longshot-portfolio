@@ -37,7 +37,7 @@
 				<header class="about-me-header main-header">
 					<!-- Skip to main content link  -->
 					<a class="show-on-focus"  href="#main-content">Skip to main content</a>
-					<a href="/">
+					<a class="logo-link" href="/">
 						<?php perch_content("Green Logo"); ?>
 					</a>
 					<?php perch_content("Header Content"); ?>
