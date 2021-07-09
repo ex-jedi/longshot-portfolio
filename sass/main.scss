@@ -39,7 +39,6 @@ body {
   position: relative;
   min-width: 320px;
   max-width: 2500px;
-  overflow-x: hidden;
   @include main-font-stack;
 }
 
@@ -124,6 +123,7 @@ a {
   width: 100%;
   margin: 0 auto;
   z-index: 4;
+  overflow-x: hidden;
 }
 
 //********** Main Logo **********
@@ -179,7 +179,6 @@ a {
 }
 
 .main-nav-trigger-wrapper {
-  //FIXME: Odd bit of spacing at the bottom
   position: fixed;
   width: fit-content;
   left: 0;
@@ -262,6 +261,10 @@ a {
 // *=========================================
 // ** Body **
 // *=========================================
+
+main {
+  overflow-x: hidden;
+}
 
 // *=========================================
 // ** Forms  **
@@ -492,7 +495,7 @@ label {
       transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
 
       @include breakpoint(800) {
-        height: .75rem;
+        height: 0.75rem;
         width: 1.5rem;
         top: 5px;
         left: 0;
@@ -573,6 +576,13 @@ label {
   color: $background-colour-light;
   padding: $paragraph-spacing-medium;
   text-align: center;
+
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
 
   @include breakpoint(750) {
     padding-bottom: $section-spacing-extra-small;
