@@ -6,3 +6,5 @@ scripts/js/**
 package.json
 package-lock.json
 prepros-6.config
+.prettierrc
+.eslintrc

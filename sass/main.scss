@@ -34,7 +34,6 @@ html {
 }
 
 body {
-  //TODO: Choose max size
   margin: 0 auto;
   position: relative;
   min-width: 320px;
@@ -107,11 +106,8 @@ img {
 
 //********** Links **********
 
-// Better to leave underlining on by default and switch it off where you don't want it
-
 a {
   text-decoration: underline;
-  color: $link-colour;
 }
 
 //*=========================================
@@ -130,6 +126,11 @@ a {
 .main-logo {
   width: 90%;
   max-width: 500px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  width: fit-content;
   margin: 0 auto;
 }
 
