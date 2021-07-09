@@ -21,7 +21,8 @@
 
 .gallery-header {
   background-color: $background-colour-light;
-  padding: $paragraph-spacing-medium 0 $section-spacing-extra-small;
+  padding: $paragraph-spacing-medium 0
+    calc(#{$section-spacing-extra-small} - #{$section-spacing-tiny});
 }
 
 .gallery-index-wrapper {
@@ -39,6 +40,7 @@
   padding-bottom: $section-spacing-extra-small;
   margin-bottom: $section-spacing-tiny;
   overflow: scroll;
+  padding-top: $section-spacing-tiny;
 }
 
 .gallery-index-album {
