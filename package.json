@@ -6,11 +6,11 @@
   "dependencies": {
     "flickity": "^2.2.2",
     "flickity-imagesloaded": "^2.0.0",
-    "gsap": "npm:@gsap/shockingly@^3.7.0"
+    "gsap": "npm:@gsap/shockingly@^3.7.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-wesbos": "^1.0.1",
