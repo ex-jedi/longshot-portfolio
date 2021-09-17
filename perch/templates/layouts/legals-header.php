@@ -31,6 +31,7 @@
 			'template' => 'default.html'
 		));
 		?>
+		<!-- TODO: Add Microsoft Clarity -->
 	</head>
 		<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 			<div class="site-wrapper">
