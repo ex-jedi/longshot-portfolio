@@ -29,7 +29,7 @@ function splitTextFunction() {
 
     const splitTextLines = splitFadeUpElements.lines;
 
-    gsap.set(splitTextLines, { opacity: 0, x: 20 });
+    gsap.set(splitTextLines, { opacity: 0, x: -40 });
 
     ScrollTrigger.create({
       trigger: elem,
@@ -41,7 +41,7 @@ function splitTextFunction() {
       onEnter: () => {
         gsap.fromTo(
           splitTextLines,
-          { opacity: 0, x: 20 },
+          { opacity: 0, x: -40 },
           { opacity: 1, x: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
         );
       },
@@ -161,7 +161,7 @@ function aboutMeparagraphFunction() {
   const fadeparas = gsap.utils.toArray(document.querySelectorAll('.about-me-section p'));
 
   fadeparas.forEach((paras) => {
-    gsap.set(paras, { opacity: 0, x: 20 });
+    gsap.set(paras, { opacity: 0, x: -40 });
 
     ScrollTrigger.create({
       trigger: paras,
