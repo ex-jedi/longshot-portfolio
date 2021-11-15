@@ -166,7 +166,6 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   padding: $section-spacing-tiny;
-  // margin: $section-spacing-tiny auto;
 
   @include breakpoint(750) {
     font-size: $font-size-small;
