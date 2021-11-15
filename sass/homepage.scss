@@ -50,8 +50,13 @@
   top: 80%;
   animation: brignell-bounce 2s ease-in-out infinite normal forwards;
 
+  @include breakpoint(1100) {
+    height: 60px;
+  }
+
   @include breakpoint(750) {
-    top: 65%;
+    top: 75%;
+    height: 50px;
   }
 }
 
