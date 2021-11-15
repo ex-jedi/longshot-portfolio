@@ -741,6 +741,10 @@ body:not(.user-is-tabbing) textarea:focus {
 //*=========================================
 
 @media not all and (min-resolution: 0.001dpcm) {
+  input {
+    border-radius: 0;
+  }
+
   .sideways-text {
     width: 50px;
 
