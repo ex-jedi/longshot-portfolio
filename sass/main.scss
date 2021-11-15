@@ -166,7 +166,6 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   padding: $section-spacing-tiny;
-  // margin: $section-spacing-tiny auto;
 
   @include breakpoint(750) {
     font-size: $font-size-small;
@@ -185,6 +184,7 @@ a {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  background-color: $background-colour-two;
 
   @include breakpoint(750) {
     @include flex(col);
@@ -194,12 +194,11 @@ a {
     top: unset;
     transform: translateY(0);
     width: 100%;
-    background-color: $background-colour-three;
   }
 }
 
 .main-nav-trigger {
-  background-color: $background-colour-three;
+  background-color: $background-colour-two;
   padding: $paragraph-spacing-medium;
   margin: 0;
   border: none;
@@ -609,7 +608,7 @@ label {
 // *=========================================
 
 .main-footer {
-  background-color: $background-colour-four;
+  background-color: $background-colour-three;
   margin: 0;
   font-size: $font-size-really-tiny;
   color: $background-colour-light;
@@ -741,6 +740,10 @@ body:not(.user-is-tabbing) textarea:focus {
 //*=========================================
 
 @media not all and (min-resolution: 0.001dpcm) {
+  input {
+    border-radius: 0;
+  }
+
   .sideways-text {
     width: 50px;
 
