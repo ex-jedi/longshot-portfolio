@@ -185,6 +185,7 @@ a {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  background-color: $background-colour-two;
 
   @include breakpoint(750) {
     @include flex(col);
@@ -194,12 +195,11 @@ a {
     top: unset;
     transform: translateY(0);
     width: 100%;
-    background-color: $background-colour-three;
   }
 }
 
 .main-nav-trigger {
-  background-color: $background-colour-three;
+  background-color: $background-colour-two;
   padding: $paragraph-spacing-medium;
   margin: 0;
   border: none;
@@ -609,7 +609,7 @@ label {
 // *=========================================
 
 .main-footer {
-  background-color: $background-colour-four;
+  background-color: $background-colour-three;
   margin: 0;
   font-size: $font-size-really-tiny;
   color: $background-colour-light;
