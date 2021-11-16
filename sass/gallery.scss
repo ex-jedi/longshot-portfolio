@@ -249,6 +249,12 @@
 //*=========================================
 
 @media not all and (min-resolution: 0.001dpcm) {
+  .spacer-div-content {
+    display: block;
+    width: $section-spacing-tiny;
+    height: 100px;
+  }
+
   .gallery-album-page {
     .main-nav-trigger-wrapper {
       position: static;
