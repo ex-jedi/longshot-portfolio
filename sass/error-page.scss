@@ -32,10 +32,6 @@
   width: 70%;
   max-width: 800px;
 
-  p {
-    // margin: 0;
-  }
-
   @include breakpoint(800) {
     font-size: $font-size-small;
   }
