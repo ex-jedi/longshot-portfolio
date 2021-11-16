@@ -100,6 +100,10 @@
 
 .gallery-album-section {
   padding: 0 $section-spacing-tiny;
+
+  @include breakpoint(750) {
+    padding: 0 $paragraph-spacing-tiny;
+  }
 }
 
 .carousel-cell {
@@ -108,13 +112,18 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  margin: 0 $section-spacing-tiny;
+  padding: 0 $paragraph-spacing-large;
+
+  @include breakpoint(750) {
+    padding: 0;
+  }
 }
 
 .gallery-album-image {
   width: 100%;
   height: 90vh;
   object-fit: contain;
-  margin: auto;
 }
 
 //********** Scroll Animations **********
@@ -231,3 +240,45 @@
   margin: 0;
   padding: 0;
 }
+
+//*=========================================
+//** iOS Styles **
+//*=========================================
+//*=========================================
+//** IOS **
+//*=========================================
+
+@media not all and (min-resolution: 0.001dpcm) {
+  .gallery-album-page {
+    .main-nav-trigger-wrapper {
+      position: static;
+      @include flex(col);
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      top: unset;
+      transform: translateY(0);
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sideways-text {
+      writing-mode: horizontal-tb;
+      transform: rotate(0);
+      margin: 0 auto;
+      width: fit-content;
+      padding: 0;
+    }
+
+    .main-nav-trigger {
+      margin: 0 auto;
+      width: 100%;
+      padding: 1rem $paragraph-spacing-medium;
+    }
+
+    .carousel-cell {
+      padding: 0;
+    }
+  } // Album page styles end
+} // IOS Styles End
