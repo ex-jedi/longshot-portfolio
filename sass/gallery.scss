@@ -231,3 +231,41 @@
   margin: 0;
   padding: 0;
 }
+
+//*=========================================
+//** iOS Styles **
+//*=========================================
+//*=========================================
+//** IOS **
+//*=========================================
+
+@media not all and (min-resolution: 0.001dpcm) {
+  .gallery-album-page {
+    .main-nav-trigger-wrapper {
+      position: static;
+      @include flex(col);
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      top: unset;
+      transform: translateY(0);
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sideways-text {
+      writing-mode: horizontal-tb;
+      transform: rotate(0);
+      margin: 0 auto;
+      width: fit-content;
+      padding: 0;
+    }
+
+    .main-nav-trigger {
+      margin: 0 auto;
+      width: 100%;
+      padding: 1rem $paragraph-spacing-medium;
+    }
+  } // Album page styles end
+} // IOS Styles End
